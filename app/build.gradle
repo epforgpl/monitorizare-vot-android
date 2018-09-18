@@ -6,7 +6,7 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "ro.code4.monitorizarevot"
+        applicationId "pl.org.epf.monitorujwybory"
         minSdkVersion 17
         targetSdkVersion 27
         versionCode 12

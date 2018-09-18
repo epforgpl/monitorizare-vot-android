@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+           tools:ignore="Typos">
+    <string name="app_name">Monitoruj Wybory</string>
+    <string name="app_version">V%1$S</string>
+
+    <!-- General -->
+    <string name="developed_by">aplikacja stworzona przez</string>
+    <string name="please_wait">Proszę czekać…</string>
+    <string name="button_continue">Dalej</string>
+    <string name="button_continue_to_forms">Przejdź do formularzy</string>
+    <string name="button_send">Wyślij</string>
+    <string name="spinner_choose">Wybierz</string>
+    <string name="hint_time">hh:mm</string>
+    <string name="empty" />
+
+    <string name="error_permission">Błąd dostępu %1$S</string>
+    <string name="error_section_type">Błąd podczas interpretowania sekcji ??</string>
+
+    <!-- Fragment titles -->
+    <string name="title_branch_details">Dane lokalu/komisji? wyborczej</string>
+    <string name="title_branch_selection">Wybierz lokal/komisję wyborczą</string>
+    <string name="title_forms_list">Formularze</string>
+    <string name="title_form">Formularz %1$s</string>
+    <string name="title_note">Dodaj notatkę</string>
+    <string name="title_guide">Przewodnik</string>
+
+    <!-- Menu -->
+    <string name="menu_forms">Formularze</string>
+    <string name="menu_change_branch">Zmień lokal/komisję wyborczą</string>
+    <string name="menu_guide">Przewodnik dla obserwatorów</string>
+    <string name="menu_call">Zadzwoń do koordynatora/centrali</string>
+
+    <!-- Images -->
+    <string name="content_icon_building">Ikona budynku</string>
+
+    <!-- Login -->
+    <string name="login_phone">Numer telefonu</string>
+    <string name="login_branch">Kod autoryzacji</string>
+    <string name="login">Zaloguj się</string>
+    <string name="empty_credential_message">Podaj numer telefonu oraz kod wysłany SMSem. Gdy nie posiadasz kodu skontaktuj się z koordynatorem.</string>
+
+    <!-- Branch selection -->
+    <string name="branch_title">Wybierz lokal/komisję wyborczą (2)</string>
+    <string name="branch_subtitle">jesteś w</string>
+    <string name="branch_county">Województwo, powiat, gmina</string>
+    <string name="branch_number">Numer komisji wyborczej</string>
+    <string name="branch_change">Zmień lokal/komisję wyborczą</string>
+
+    <!--
+    <string name="branch_question_environment">Choose the area of the station</string>
+    <string name="branch_answer_rural">Rural</string>
+    <string name="branch_answer_urban">Urban</string>
+    <string name="branch_question_sex">The president of the polling station is:</string>
+    <string name="branch_answer_man">Man</string>
+    <string name="branch_answer_woman">Woman</string>
+    -->
+    <string name="branch_question_enter">Czas rozpoczęcia obserwacji</string>
+    <string name="branch_question_leave">Czas zakończenia obserwacji</string>
+    <string name="branch_choose_time_enter">Wybierz czas rozpoczęcia obserwacji</string>
+    <string name="branch_choose_time_leave">Wybierz czas zakończenia obserwacji</string>
+    <string name="invalid_branch_county">Wybierz województwo, powiat, gminę</string>
+    <string name="invalid_branch_number">Podaj numer komisji wyborczej</string>
+    <string name="invalid_branch_number_minus">Niepoprawny numer komisji wyborczej</string>
+    <string name="invalid_branch_number_max">Niepoprawny numer komisji wyborczej dla tego obszaru [max %2$s]</string>
+    <!--
+        <string name="invalid_branch_environment">Choose urban of rural</string>
+        <string name="invalid_branch_sex">Choose man or woman</string>
+    -->
+
+    <string name="invalid_branch_time_in">Podaj poprawny czas rozpoczęcia obserwacji</string>
+
+    <!-- Forms list -->
+    <string name="form_1">Form A</string>
+    <string name="form_1_letter">A</string>
+    <string name="form_2">Form B</string>
+    <string name="form_2_letter">B</string>
+    <string name="form_3">Form C</string>
+    <string name="form_3_letter">C</string>
+    <string name="form_notes">Dodaj notatkę</string>
+    <string name="error_no_form_data">There is no data for this form.</string>
+
+    <!-- Question details -->
+    <string name="question_complete">Wypełnione</string>
+    <string name="question_incomplete">Niewypełnione</string>
+    <string name="question_notes">Notatki</string>
+    <string name="question_next">Następne</string>
+    <string name="question_finish">Wyślij</string>
+
+    <!-- Notes -->
+    <string name="note_title">Dodaj notatkę</string>
+    <string name="note_description">Notatka</string>
+    <string name="note_description_hint">Wpisz tutaj</string>
+    <string name="note_photo">Dodaj zdjęcie lub wideo</string>
+    <string name="note_saved">Zapisane notatki</string>
+    <string name="invalid_note">Dodaj opis lub wgraj zdjęcie/wideo</string>
+    <string name="error_permission_external_storage">Uprawnij aplikację do dostępu do zdjęć i wideo</string>
+</resources>

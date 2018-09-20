@@ -76,7 +76,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                 NetworkService.postBranchDetails(branchDetails);
                 Data.getInstance().markSynced(branchDetails);
             } catch (IOException e) {
-                e.printStackTrace();
+                e.printStackTrace(); // TODO why silencing errors?
             }
         }
     }
@@ -89,7 +89,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
             getAnswersFromForm(Data.getInstance().getThirdForm(), questionAnswers);
             NetworkService.postQuestionAnswer(new ResponseAnswerContainer(questionAnswers));
         }catch (IOException e){
-            e.printStackTrace();
+            e.printStackTrace(); // TODO why silencing errors?
         }
     }
 
@@ -100,7 +100,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                 NetworkService.postNote(note);
                 Data.getInstance().deleteNote(note);
             } catch (IOException e) {
-                e.printStackTrace();
+                e.printStackTrace(); // TODO why silencing errors?
             }
         }
     }
@@ -128,7 +128,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                 getForms(versionResponse.getVersion());
             }
         } catch (IOException e){
-            e.printStackTrace();
+            e.printStackTrace(); // TODO why silencing errors?
         }
     }
 

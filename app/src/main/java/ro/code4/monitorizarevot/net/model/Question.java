@@ -20,7 +20,7 @@ public class Question extends RealmObject implements Serializable {
     @Expose
     private String codIntrebare;
     @Expose
-    private Integer idTipIntrebare;
+    private Integer idTipIntrebare; // TODO API 2.0 this should be a more meaningful enum/string in API
     @Expose
     private RealmList<Answer> raspunsuriDisponibile;
     private BranchQuestionAnswer branchQuestionAnswer;

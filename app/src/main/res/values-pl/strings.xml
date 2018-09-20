@@ -25,7 +25,7 @@
     <string name="title_guide">Przewodnik</string>
 
     <!-- Menu -->
-    <string name="menu_forms">Zmień formularz</string>
+    <string name="menu_forms">Zmień formularz</string><!-- TODO update in en -->
     <string name="menu_change_branch">Zmień lokal/komisję wyborczą</string>
     <string name="menu_guide">Przewodnik dla obserwatorów</string>
     <string name="menu_call">Zadzwoń do koordynatora/centrali</string>
@@ -82,7 +82,7 @@
     <!-- Question details -->
     <string name="question_complete">Wypełnione</string>
     <string name="question_incomplete">Niewypełnione</string>
-    <string name="question_notes">Notatki</string>
+    <string name="question_notes">Dodaj notatkę</string><!-- TODO update in en -->
     <string name="question_next">Następne</string>
     <string name="question_finish">Wyślij</string>
 
@@ -91,7 +91,7 @@
     <string name="note_description">Notatka</string>
     <string name="note_description_hint">Wpisz tutaj</string>
     <string name="note_photo">Dodaj zdjęcie lub wideo</string>
-    <string name="note_saved">Zapisane notatki</string>
+    <string name="note_saved">Zapisano notatkę</string>
     <string name="invalid_note">Dodaj opis lub wgraj zdjęcie/wideo</string>
     <string name="error_permission_external_storage">Uprawnij aplikację do dostępu do zdjęć i wideo</string>
 </resources>

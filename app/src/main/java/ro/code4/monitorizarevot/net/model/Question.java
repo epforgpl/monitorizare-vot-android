@@ -30,7 +30,7 @@ public class Question extends RealmObject implements Serializable {
 
     @Expose
     @SerializedName("idTipIntrebare")
-    private Integer typeId;
+    private Integer typeId; // TODO API 2.0 this should be a more meaningful enum/string in API
 
     @Expose
     @SerializedName("raspunsuriDisponibile")

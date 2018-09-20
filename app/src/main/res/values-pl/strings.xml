@@ -25,7 +25,7 @@
     <string name="title_guide">Przewodnik</string>
 
     <!-- Menu -->
-    <string name="menu_forms">Formularze</string>
+    <string name="menu_forms">Zmień formularz</string>
     <string name="menu_change_branch">Zmień lokal/komisję wyborczą</string>
     <string name="menu_guide">Przewodnik dla obserwatorów</string>
     <string name="menu_call">Zadzwoń do koordynatora/centrali</string>

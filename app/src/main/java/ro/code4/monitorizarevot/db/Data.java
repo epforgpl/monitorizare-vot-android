@@ -82,15 +82,15 @@ public class Data {
     }
 
     public Map<String, Integer> getFormVersions() {
-        Iterator<FormVersion> it = Realm.getDefaultInstance()
-                .where(FormVersion.class)
-                .findAll().iterator();
+        Realm realm = Realm.getDefaultInstance();
+        Iterator<FormVersion> it = realm.where(FormVersion.class).findAll().iterator();
 
         Map<String, Integer> versions = new HashMap<>();
         while (it.hasNext()) {
             FormVersion v = it.next();
             versions.put(v.getId(), v.getVersion());
         }
+        realm.close();
 
         return versions;
     }

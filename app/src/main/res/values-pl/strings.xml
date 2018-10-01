@@ -14,7 +14,7 @@
     <string name="empty" />
 
     <string name="error_permission">Błąd dostępu %1$S</string>
-    <string name="error_section_type">Błąd podczas interpretowania sekcji ??</string>
+    <string name="error_question_type">Nieznany typ pytania. Skontaktuj się z administratorem.</string>
 
     <!-- Fragment titles -->
     <string name="title_branch_details">Dane lokalu/komisji? wyborczej</string>

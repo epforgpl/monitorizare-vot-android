@@ -15,7 +15,7 @@
     <string name="empty_credential_message">Introduceți numărul de telefon şi codul primit.</string>
 
     <string name="error_permission">Eroare permisiune %1$S</string>
-    <string name="error_section_type">Eroare în interpretarea secțiunii</string>
+    <string name="error_question_type">Eroare în interpretarea secțiunii</string>
 
     <!-- Fragment titles -->
     <string name="title_branch_details">Detalii secție</string>

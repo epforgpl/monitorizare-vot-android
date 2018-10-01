@@ -15,7 +15,7 @@
     <string name="empty_credential_message">Fill in your phone number and the code you received.</string>
 
     <string name="error_permission">Permission error %1$S</string>
-    <string name="error_section_type">Error in interpreting the section</string>
+    <string name="error_question_type">Unknown question type. Contact administrator.</string>
 
     <!-- Fragment titles -->
     <string name="title_branch_details">Polling station details</string>

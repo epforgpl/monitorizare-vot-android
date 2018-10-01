@@ -50,10 +50,11 @@
     <string name="branch_question_environment">Choose the area of the station</string>
     <string name="branch_answer_rural">Rural</string>
     <string name="branch_answer_urban">Urban</string>
-    <string name="branch_question_sex">The president of the polling station is:</string>
     <string name="branch_answer_man">Man</string>
     <string name="branch_answer_woman">Woman</string>
     -->
+    <string name="branch_question_sex">Komisji wyborczej przewodniczy</string>
+
     <string name="branch_question_enter">Czas rozpoczęcia obserwacji</string>
     <string name="branch_question_leave">Czas zakończenia obserwacji</string>
     <string name="branch_choose_time_enter">Wybierz czas rozpoczęcia obserwacji</string>

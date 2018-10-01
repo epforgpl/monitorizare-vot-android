@@ -17,7 +17,7 @@ import ro.code4.monitorizarevot.widget.ChangeBranchBarLayout;
 
 import static ro.code4.monitorizarevot.ToolbarActivity.BRANCH_SELECTION_BACKSTACK_INDEX;
 
-public class FormsListFragment extends BaseFragment implements View.OnClickListener {
+public class FormsListFragment extends BaseFragment {
     public static FormsListFragment newInstance() {
         return new FormsListFragment();
     }
@@ -27,10 +27,32 @@ public class FormsListFragment extends BaseFragment implements View.OnClickListe
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_forms_list, container, false);
 
-        rootView.findViewById(R.id.tile_form_1).setOnClickListener(this);
-        rootView.findViewById(R.id.tile_form_2).setOnClickListener(this);
-        rootView.findViewById(R.id.tile_form_3).setOnClickListener(this);
-        rootView.findViewById(R.id.tile_form_notes).setOnClickListener(this);
+        // TODO dynamically add forms https://github.com/code4romania/monitorizare-vot-android/issues/50
+        rootView.findViewById(R.id.tile_form_A).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showForm(Data.getInstance().getForm("A"));
+            }
+        });
+        rootView.findViewById(R.id.tile_form_B).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showForm(Data.getInstance().getForm("B"));
+            }
+        });
+        rootView.findViewById(R.id.tile_form_C).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showForm(Data.getInstance().getForm("C"));
+            }
+        });
+
+        rootView.findViewById(R.id.tile_form_notes).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigateTo(AddNoteFragment.newInstance());
+            }
+        });
 
         setBranchBar((ChangeBranchBarLayout) rootView.findViewById(R.id.change_branch_bar));
 
@@ -45,24 +67,6 @@ public class FormsListFragment extends BaseFragment implements View.OnClickListe
                 navigateBackUntil(BRANCH_SELECTION_BACKSTACK_INDEX);
             }
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tile_form_1:
-                showForm(Data.getInstance().getFirstForm());
-                break;
-            case R.id.tile_form_2:
-                showForm(Data.getInstance().getSecondForm());
-                break;
-            case R.id.tile_form_3:
-                showForm(Data.getInstance().getThirdForm());
-                break;
-            case R.id.tile_form_notes:
-                navigateTo(AddNoteFragment.newInstance());
-                break;
-        }
     }
 
     private void showForm(Form form) {

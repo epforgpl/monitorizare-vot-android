@@ -44,9 +44,9 @@ public class FormSelectorCard extends CardView {
                 letter.setVisibility(GONE);
             } else {
                 icon.setVisibility(GONE);
-                letter.setText(array.getResourceId(R.styleable.FormSelectorCard_letter, R.string.empty));
+                letter.setText(array.getText(R.styleable.FormSelectorCard_letter));
             }
-            text.setText(array.getResourceId(R.styleable.FormSelectorCard_text, R.string.empty));
+            text.setText(array.getText(R.styleable.FormSelectorCard_text));
 
             array.recycle();
         }

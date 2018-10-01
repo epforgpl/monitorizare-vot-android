@@ -12,19 +12,17 @@ import android.support.annotation.NonNull;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-import ro.code4.monitorizarevot.constants.FormType;
 import ro.code4.monitorizarevot.constants.Sync;
 import ro.code4.monitorizarevot.db.Data;
 import ro.code4.monitorizarevot.net.NetworkService;
 import ro.code4.monitorizarevot.net.model.BranchDetails;
 import ro.code4.monitorizarevot.net.model.BranchQuestionAnswer;
-import ro.code4.monitorizarevot.net.model.Form;
 import ro.code4.monitorizarevot.net.model.Note;
 import ro.code4.monitorizarevot.net.model.Question;
 import ro.code4.monitorizarevot.net.model.QuestionAnswer;
 import ro.code4.monitorizarevot.net.model.ResponseAnswerContainer;
-import ro.code4.monitorizarevot.net.model.Version;
 import ro.code4.monitorizarevot.net.model.response.VersionResponse;
 import ro.code4.monitorizarevot.observable.ObservableListener;
 import ro.code4.monitorizarevot.util.FormUtils;
@@ -84,9 +82,11 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     private void postQuestionAnswers() {
         try{
             List<QuestionAnswer> questionAnswers = new ArrayList<>();
-            getAnswersFromForm(Data.getInstance().getFirstForm(), questionAnswers);
-            getAnswersFromForm(Data.getInstance().getSecondForm(), questionAnswers);
-            getAnswersFromForm(Data.getInstance().getThirdForm(), questionAnswers);
+
+            for(String formCode : Data.getInstance().getFormVersions().keySet()) {
+                getAnswersFromForm(formCode, questionAnswers);
+            }
+
             NetworkService.postQuestionAnswer(new ResponseAnswerContainer(questionAnswers));
         }catch (IOException e){
             e.printStackTrace(); // TODO why silencing errors?
@@ -105,13 +105,13 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         }
     }
 
-    private void getAnswersFromForm(Form form, List<QuestionAnswer> questionAnswers) {
-        if(form != null){
-            List<Question> questionList = FormUtils.getAllQuestions(form.getId());
+    private void getAnswersFromForm(String formCode, List<QuestionAnswer> questionAnswers) {
+        if(formCode != null){
+            List<Question> questionList = FormUtils.getAllQuestions(formCode);
             for (Question question : questionList) {
                 if(!question.isSynced()){
                     for (BranchQuestionAnswer branchQuestionAnswer : Data.getInstance().getCityBranchPerQuestion(question.getId())) {
-                        QuestionAnswer questionAnswer = new QuestionAnswer(branchQuestionAnswer, form.getId());
+                        QuestionAnswer questionAnswer = new QuestionAnswer(branchQuestionAnswer, formCode);
                         questionAnswers.add(questionAnswer);
                     }
                 }
@@ -122,28 +122,27 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     private void getFormsDefinition() {
         try {
             VersionResponse versionResponse = NetworkService.doGetFormVersion();
-            Version existingVersion = Data.getInstance().getFormVersion();
-            if(!versionsEqual(existingVersion, versionResponse.getVersion())) {
+            Map<String, Integer> existingFormVersion = Data.getInstance().getFormVersions();
+
+            if(existingFormVersion == null || !existingFormVersion.equals(versionResponse.getVersions())) {
                 Data.getInstance().deleteAnswersAndNotes();
-                getForms(versionResponse.getVersion());
+                // TODO why we define formVersion for each form if in the end we reload everything?
+                // question or option IDs might have changed.. that's a question what we promise from the API
+                // if we should reload everything then it would be good to have one endpoint
+
+                getForms(versionResponse.getVersions());
             }
         } catch (IOException e){
             e.printStackTrace(); // TODO why silencing errors?
         }
     }
 
-    private boolean versionsEqual(Version before, Version current) {
-        return (before != null)
-                && before.getA().equals(current.getA())
-                && before.getB().equals(current.getB())
-                && before.getC().equals(current.getC());
-    }
+    private void getForms(Map<String, Integer> formVersion) {
+        FormDefinitionSubscriber subscriber = new FormDefinitionSubscriber(formVersion, formVersion.size());
 
-    private void getForms(Version version) {
-        FormDefinitionSubscriber subscriber = new FormDefinitionSubscriber(version, 3);
-        NetworkService.doGetForm(FormType.FIRST).startRequest(subscriber);
-        NetworkService.doGetForm(FormType.SECOND).startRequest(subscriber);
-        NetworkService.doGetForm(FormType.THIRD).startRequest(subscriber);
+        for(String formCode : formVersion.keySet()) {
+            NetworkService.doGetForm(formCode).startRequest(subscriber);
+        }
     }
 
     public static void requestSync(Context context) {
@@ -166,19 +165,19 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     }
 
     private class FormDefinitionSubscriber extends ObservableListener<Boolean> {
-        private final Version version;
+        private final Map<String, Integer> formVersion;
         private final int numberOfRequests;
         private int successCount = 0;
 
-        FormDefinitionSubscriber(Version version, int numberOfRequests) {
-            this.version = version;
+        FormDefinitionSubscriber(Map<String, Integer> formVersion, int numberOfRequests) {
+            this.formVersion = formVersion;
             this.numberOfRequests = numberOfRequests;
         }
 
         @Override
         public void onSuccess() {
             if (successCount == numberOfRequests) {
-                Data.getInstance().saveFormsVersion(version);
+                Data.getInstance().saveFormsVersion(formVersion);
             }
         }
 

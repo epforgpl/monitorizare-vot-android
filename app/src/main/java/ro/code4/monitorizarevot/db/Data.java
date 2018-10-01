@@ -2,21 +2,24 @@ package ro.code4.monitorizarevot.db;
 
 import android.support.annotation.NonNull;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmModel;
 import io.realm.RealmResults;
-import ro.code4.monitorizarevot.constants.FormType;
 import ro.code4.monitorizarevot.net.model.BranchDetails;
 import ro.code4.monitorizarevot.net.model.BranchQuestionAnswer;
 import ro.code4.monitorizarevot.net.model.Form;
+import ro.code4.monitorizarevot.net.model.FormVersion;
 import ro.code4.monitorizarevot.net.model.Note;
 import ro.code4.monitorizarevot.net.model.Question;
 import ro.code4.monitorizarevot.net.model.Section;
 import ro.code4.monitorizarevot.net.model.Syncable;
-import ro.code4.monitorizarevot.net.model.Version;
 
 public class Data {
     private static final String AUTO_INCREMENT_PRIMARY_KEY = "id";
@@ -67,18 +70,6 @@ public class Data {
         return result;
     }
 
-    public Form getFirstForm() {
-        return getForm(FormType.FIRST);
-    }
-
-    public Form getSecondForm() {
-        return getForm(FormType.SECOND);
-    }
-
-    public Form getThirdForm() {
-        return getForm(FormType.THIRD);
-    }
-
     public Form getForm(String formId) {
         Realm realm = Realm.getDefaultInstance();
         RealmResults<Form> results = realm
@@ -90,11 +81,18 @@ public class Data {
         return result;
     }
 
-    public Version getFormVersion() {
-        RealmResults<Version> queryResult = Realm.getDefaultInstance()
-                .where(Version.class)
-                .findAll();
-        return queryResult.size() > 0 ? queryResult.first() : null;
+    public Map<String, Integer> getFormVersions() {
+        Iterator<FormVersion> it = Realm.getDefaultInstance()
+                .where(FormVersion.class)
+                .findAll().iterator();
+
+        Map<String, Integer> versions = new HashMap<>();
+        while (it.hasNext()) {
+            FormVersion v = it.next();
+            versions.put(v.getId(), v.getVersion());
+        }
+
+        return versions;
     }
 
     public List<Note> getNotes() {
@@ -146,10 +144,15 @@ public class Data {
         realm.close();
     }
 
-    public void saveFormsVersion(Version version) {
+    public void saveFormsVersion(Map<String, Integer> formVersions) {
+        List<FormVersion> objects = new ArrayList<>();
+        for(String formCode : formVersions.keySet()) {
+            objects.add(new FormVersion(formCode, formVersions.get(formCode)));
+        }
+
         Realm realm = Realm.getDefaultInstance();
         realm.beginTransaction();
-        realm.copyToRealmOrUpdate(version);
+        realm.copyToRealmOrUpdate(objects);
         realm.commitTransaction();
         realm.close();
     }

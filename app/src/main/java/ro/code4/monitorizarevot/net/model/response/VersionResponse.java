@@ -4,17 +4,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-
-import ro.code4.monitorizarevot.net.model.Version;
+import java.util.HashMap;
+import java.util.Map;
 
 public class VersionResponse implements Serializable {
 
-    // TODO serialized names to be translated when api is updated
+    // TODO add serialized names of the forms to be translated when api is updated
+    // https://github.com/code4romania/monitorizare-vot/issues/67
     @Expose
     @SerializedName("versiune")
-    private Version version;
+    private Map<String, Integer> versions = new HashMap<>();
 
-    public Version getVersion() {
-        return version;
+    public Map<String, Integer> getVersions() {
+        return versions;
     }
 }

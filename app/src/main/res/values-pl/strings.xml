@@ -17,8 +17,8 @@
     <string name="error_question_type">Nieznany typ pytania. Skontaktuj się z administratorem.</string>
 
     <!-- Fragment titles -->
-    <string name="title_branch_details">Dane lokalu/komisji? wyborczej</string>
-    <string name="title_branch_selection">Wybierz lokal/komisję wyborczą</string>
+    <string name="title_branch_details">Dane komisji wyborczej</string>
+    <string name="title_branch_selection">Wybierz komisję wyborczą</string>
     <string name="title_forms_list">Formularze</string>
     <string name="title_form">Formularz %1$s</string>
     <string name="title_note">Dodaj notatkę</string>
@@ -26,9 +26,9 @@
 
     <!-- Menu -->
     <string name="menu_forms">Zmień formularz</string><!-- TODO update in en -->
-    <string name="menu_change_branch">Zmień lokal/komisję wyborczą</string>
+    <string name="menu_change_branch">Zmień komisję</string>
     <string name="menu_guide">Przewodnik dla obserwatorów</string>
-    <string name="menu_call">Zadzwoń do koordynatora/centrali</string>
+    <string name="menu_call">Zadzwoń do sztabu</string>
 
     <!-- Images -->
     <string name="content_icon_building">Ikona budynku</string>
@@ -40,11 +40,11 @@
     <string name="empty_credential_message">Podaj numer telefonu oraz kod wysłany SMSem. Gdy nie posiadasz kodu skontaktuj się z koordynatorem.</string>
 
     <!-- Branch selection -->
-    <string name="branch_title">Wybierz lokal/komisję wyborczą (2)</string>
-    <string name="branch_subtitle">jesteś w</string>
+    <string name="branch_title">Wybierz komisję wyborczą</string>
+    <string name="branch_subtitle"></string>
     <string name="branch_county">Województwo, powiat, gmina</string>
     <string name="branch_number">Numer komisji wyborczej</string>
-    <string name="branch_change">Zmień lokal/komisję wyborczą</string>
+    <string name="branch_change">Zmień komisję</string>
 
     <!--
     <string name="branch_question_environment">Choose the area of the station</string>

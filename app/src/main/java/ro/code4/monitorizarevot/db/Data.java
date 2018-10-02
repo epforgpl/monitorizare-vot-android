@@ -14,6 +14,7 @@ import io.realm.RealmModel;
 import io.realm.RealmResults;
 import ro.code4.monitorizarevot.net.model.BranchDetails;
 import ro.code4.monitorizarevot.net.model.BranchQuestionAnswer;
+import ro.code4.monitorizarevot.net.model.District;
 import ro.code4.monitorizarevot.net.model.Form;
 import ro.code4.monitorizarevot.net.model.FormVersion;
 import ro.code4.monitorizarevot.net.model.Note;
@@ -120,6 +121,44 @@ public class Data {
         Realm realm = Realm.getDefaultInstance();
         realm.beginTransaction();
         realm.copyToRealmOrUpdate(branchQuestionAnswer);
+        realm.commitTransaction();
+        realm.close();
+    }
+
+    public List<District> getDistricts(int level) {
+        if (level < 1) {
+            throw new IllegalArgumentException("Levels start from 1 onward");
+        }
+
+        Realm realm = Realm.getDefaultInstance();
+        RealmResults<District> results = realm
+                .where(District.class)
+                .equalTo("level", level)
+                .findAll();
+
+        List<District> result = realm.copyFromRealm(results);
+        realm.close();
+
+        return result;
+    }
+
+    public List<District> getDistrictsOf(String parentDistrictId) {
+        Realm realm = Realm.getDefaultInstance();
+        RealmResults<District> results = realm
+                .where(District.class)
+                .equalTo("parentId", parentDistrictId)
+                .findAll();
+
+        List<District> result = realm.copyFromRealm(results);
+        realm.close();
+
+        return result;
+    }
+
+    public void saveDistricts(List<District> districts) {
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        realm.copyToRealmOrUpdate(districts);
         realm.commitTransaction();
         realm.close();
     }

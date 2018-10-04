@@ -30,7 +30,7 @@ public class DumbApiService implements ApiService {
     private AssetManager assetManager;
     private String demoDir = "demo-pl";
 
-    public DumbApiService(AssetManager assetManager) {
+    public void setAssetManager(AssetManager assetManager) {
         this.assetManager = assetManager;
     }
 

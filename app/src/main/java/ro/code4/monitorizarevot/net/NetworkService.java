@@ -55,16 +55,17 @@ public class NetworkService {
 
     private static ApiService mApiService;
 
-    private static AssetManager assetManager;
     public static void setAssetManager(AssetManager assetManager) {
-        NetworkService.assetManager = assetManager;
+        if (getApiService() instanceof DumbApiService) {
+            ((DumbApiService) mApiService).setAssetManager(assetManager);
+        }
     }
 
-    public static ApiService getApiService() {
+    private static ApiService getApiService() {
         if (mApiService == null) {
-            boolean mockAPIMode = false; // TODO take that from build settings somehow
+            boolean mockAPIMode = false; // TODO take that from build settings somehow (flavor + asset resource value)
             if (mockAPIMode) {
-                mApiService = new DumbApiService(assetManager);
+                mApiService = new DumbApiService();
             } else {
                 mApiService = initRetrofitInstanceWithUrl(BuildConfig.WEB_BASE_URL).create(ApiService.class);
             }

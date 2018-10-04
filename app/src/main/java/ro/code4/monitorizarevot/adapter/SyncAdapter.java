@@ -121,6 +121,9 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
     private void getFormsDefinition() {
         try {
+            // for demo to be able to read asset files
+            NetworkService.setAssetManager(getContext().getAssets());
+
             VersionResponse versionResponse = NetworkService.doGetFormVersion();
             Map<String, Integer> existingFormVersion = Data.getInstance().getFormVersions();
 
@@ -139,6 +142,9 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
     private void getForms(Map<String, Integer> formVersion) {
         FormDefinitionSubscriber subscriber = new FormDefinitionSubscriber(formVersion, formVersion.size());
+
+        // for demo to be able to read asset files
+        NetworkService.setAssetManager(getContext().getAssets());
 
         for(String formCode : formVersion.keySet()) {
             NetworkService.doGetForm(formCode).startRequest(subscriber);

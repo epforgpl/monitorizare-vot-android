@@ -1,0 +1,230 @@
+[
+  {
+    "codSectiune": "6",
+    "descriere": "not used",
+    "intrebari": [
+      {
+        "idIntrebare": 104,
+        "textIntrebare": "Czas rozpoczecia liczenia glosów",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C3.01",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 216,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 105,
+        "textIntrebare": "Czas zakonczenia liczenia glosów",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C3.02",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 217,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 106,
+        "textIntrebare": "Czy na czas liczenia glosów, karty do glosowania w pozostalych wyborach pozostawaly zapakowane, opieczetowane i odlozone w miejsce widoczne dla komisji?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.03",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 218,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 219,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 107,
+        "textIntrebare": "Czy komisja ustalila: Liczbe glosów oddanych na poszczególne listy",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.04",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 220,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 221,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 108,
+        "textIntrebare": "Czy komisja ustalila: Liczbe glosów oddanych na poszczególnych kandydatów",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.05",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 222,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 223,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 109,
+        "textIntrebare": "Czy czlonkowie OKW2 wspólnie ogladali wszystkie karty?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.06",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 224,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 225,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 110,
+        "textIntrebare": "Czy komisja miala problem z ustaleniem waznosci glosów?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.07",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 226,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 227,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 111,
+        "textIntrebare": "Ile w przyblizeniu kart zawieralo rysunki i dopiski na karcie do glosowania (poza kratka)?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C3.08",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 228,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 112,
+        "textIntrebare": "Ile w przyblizeniu kart zawieralo rysunki i dopiski na karcie w obrebie kartki?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C3.09",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 229,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 113,
+        "textIntrebare": "Ile bylo przypadków glosów zaczernionych które zostaly uznane za wazne?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C3.10",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 230,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 114,
+        "textIntrebare": "Ile bylo przypadków glosów zaczernionych, w  których zaczerniona kratka dotyczyla innego komitetu wyborczego niz glos oddany ponownie?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C3.11",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 231,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 115,
+        "textIntrebare": "Czy byly problemy z wypelnieniem projektu protokolu?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.12",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 232,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 233,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 116,
+        "textIntrebare": "Czy czlonkowie OKW 2 zarzadzili przerwe?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.13",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 234,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 235,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 117,
+        "textIntrebare": "Czy w trakcie ewentualnej przerwy materialy wyborcze byly zabezpieczone i widoczne dla czlonków komisji?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C3.14",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 236,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 237,
+            "textOptiune": "nie",
+            "seIntroduceText": true
+          }
+        ]
+      }
+    ]
+  }
+]

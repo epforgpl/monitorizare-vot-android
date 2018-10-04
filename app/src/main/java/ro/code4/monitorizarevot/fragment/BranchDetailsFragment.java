@@ -103,8 +103,9 @@ public class BranchDetailsFragment extends BaseFragment implements View.OnClickL
             public void onClick(View v) {
                 if (environmentRadioGroup.getCheckedRadioButtonId() == -1) {
                     Toast.makeText(getActivity(), R.string.invalid_branch_environment, Toast.LENGTH_SHORT).show();
-                } else if (sexRadioGroup.getCheckedRadioButtonId() == -1) {
-                    Toast.makeText(getActivity(), R.string.invalid_branch_sex, Toast.LENGTH_SHORT).show();
+                    // not needed in Polish version
+//                } else if (sexRadioGroup.getCheckedRadioButtonId() == -1) {
+//                    Toast.makeText(getActivity(), R.string.invalid_branch_sex, Toast.LENGTH_SHORT).show();
                 } else if (timeEnter == null) {
                     Toast.makeText(getActivity(), R.string.invalid_branch_time_in, Toast.LENGTH_SHORT).show();
                 } else {

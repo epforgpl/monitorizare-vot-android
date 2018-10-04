@@ -44,16 +44,19 @@
                 style="@style/radioButton" />
         </RadioGroup>
 
-        <View style="@style/horizontalSeparator" />
+        <View style="@style/horizontalSeparator"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/branch_question_sex"
+            android:visibility="gone"
             style="@style/label"/>
 
         <RadioGroup
             android:id="@+id/branch_group_sex"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/label_top_spacing"
@@ -93,6 +96,7 @@
                 android:layout_width="@dimen/activity_horizontal_margin"
                 android:layout_height="match_parent" />
             <TextView
+                android:visibility="gone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -116,6 +120,7 @@
                 android:layout_width="@dimen/activity_horizontal_margin"
                 android:layout_height="match_parent" />
             <TextView
+                android:visibility="gone"
                 android:id="@+id/branch_time_leave"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/button_height"

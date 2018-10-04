@@ -1,10 +1,13 @@
 package ro.code4.monitorizarevot.net;
 
+import android.content.res.AssetManager;
+
 import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -24,10 +27,17 @@ import ro.code4.monitorizarevot.net.model.response.question.QuestionResponse;
 
 public class DumbApiService implements ApiService {
 
+    private AssetManager assetManager;
+    private String demoDir = "demo-pl";
+
+    public DumbApiService(AssetManager assetManager) {
+        this.assetManager = assetManager;
+    }
+
     public Call<Object> postAuth(final User user) {
         return new DumbCall<Object>() {
             public Response<Object> execute() {
-                if (user.getPin().equals("0000")) {
+                if (user.getPin().equals("1212")) {
                     return Response.error(400, ResponseBody.create(MediaType.parse("application/json"), ""));
                 }
 
@@ -42,23 +52,7 @@ public class DumbApiService implements ApiService {
                 List<Section> sections = new ArrayList<>();
                 Gson gson = new Gson();
 
-                String q = "{\"idIntrebare\":1, \"textIntrebare\":\"To be, or not to be\", \"codIntrebare\":\"Q1.1\", \"idTipIntrebare\":2, "
-                        + "\"raspunsuriDisponibile\": ["
-                        + "{\"idOptiune\": 1, \"textOptiune\": \"Option 1\", \"seIntroduceText\": false}, "
-                        + "{\"idOptiune\": 2, \"textOptiune\": \"Option 2, provide more details\", \"seIntroduceText\": true}"
-                        + "], "
-                + " \"branchQuestionAnswer\": null}";
-
-                String q2 = "{\"idIntrebare\":2, \"textIntrebare\":\"To be, to work, to drink\", \"codIntrebare\":\"Q1.2\", \"idTipIntrebare\":0, "
-                        + "\"raspunsuriDisponibile\": ["
-                        + "{\"idOptiune\": 3, \"textOptiune\": \"To be\", \"seIntroduceText\": false}, "
-                        + "{\"idOptiune\": 4, \"textOptiune\": \"To work\", \"seIntroduceText\": false}, "
-                        + "{\"idOptiune\": 5, \"textOptiune\": \"To drink\", \"seIntroduceText\": false} "
-                        + "], "
-                        + " \"branchQuestionAnswer\": null}";
-
-                sections.add(gson.fromJson("{\"codSectiune\": \"unused\", \"descriere\":\"Form description\", \"intrebari\":"
-                        + "[" + q + ", " + q2 + "]}", Section.class));
+                sections.add(gson.fromJson(loadJson(demoDir + "/form" + formId + ".json"), Section.class));
 
                 return Response.success(sections);
             }
@@ -69,7 +63,7 @@ public class DumbApiService implements ApiService {
         return new DumbCall<VersionResponse>() {
             public Response<VersionResponse> execute() {
                 Gson gson = new Gson();
-                VersionResponse resp = gson.fromJson("{\"versiune\":{\"A\":1, \"B\":1, \"C\":1}}", VersionResponse.class);
+                VersionResponse resp = gson.fromJson(loadJson(demoDir + "/versions.json"), VersionResponse.class);
                 return Response.success(resp);
             }
         };
@@ -125,6 +119,14 @@ public class DumbApiService implements ApiService {
 
         public Request request() {
             return null;
+        }
+    }
+
+    private String loadJson(String assetName) {
+        try {
+            return new Scanner(assetManager.open(assetName)).useDelimiter("\\Z").next();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

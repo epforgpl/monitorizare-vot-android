@@ -1,0 +1,485 @@
+[
+  {
+    "codSectiune": "0",
+    "descriere": "not used",
+    "intrebari": [
+      {
+        "idIntrebare": 0,
+        "textIntrebare": "Liczba wyborców w spisie OKW",
+        "idTipIntrebare": 2,
+        "codIntrebare": "A.01",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 0,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 1,
+        "textIntrebare": "Liczba czlonków OKW1",
+        "idTipIntrebare": 2,
+        "codIntrebare": "A.02",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 1,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 2,
+        "textIntrebare": "Liczba kobiet w skladzie komisji",
+        "idTipIntrebare": 2,
+        "codIntrebare": "A.03",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 2,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 3,
+        "textIntrebare": "Najnizsza liczba obecnych czlonków OKW 1 w trakcie obserwacji",
+        "idTipIntrebare": 2,
+        "codIntrebare": "A.04",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 3,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 4,
+        "textIntrebare": "Czy zawsze obecny byl Przewodniczacy lub Z-ca Przewodniczacego Komisji?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.05",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 4,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 5,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 5,
+        "textIntrebare": "Czy na otwarcie komisja wyborcza stawila sie do godziny 6 rano? (jesli byles obecny przed lokalem o 6:00)",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.06",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 6,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 7,
+            "textOptiune": "nie wiem",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 8,
+            "textOptiune": "nie, opóznienie 1-15 min",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 9,
+            "textOptiune": "nie, opóznienie 16-30",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 10,
+            "textOptiune": "nie, opóznienie 30-1h",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 11,
+            "textOptiune": "nie opóznienie > 1h",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 6,
+        "textIntrebare": "Czy komisja sprawdzila, ze w lokalu znajduje sie wlasciwy spis wyborców?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.07",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 12,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 13,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 7,
+        "textIntrebare": "Czy komisja przeliczyla karty do glosowania, które otrzymala?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.08",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 14,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 15,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 8,
+        "textIntrebare": "Czy komisja ostemplowala wszystkie karty do glosowania przed otwarciem lokalu wyborczego lub zaraz po otwarciu?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.09",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 16,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 17,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 9,
+        "textIntrebare": "Czy komisja sprawdzila, ze urna jest pusta, a nastepnie zamknela ja/je i zaplombowala/opieczetowala pieczecia komisji?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.10",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 18,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 19,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 10,
+        "textIntrebare": "Jaki byl rodzaj plomby uzytej do zabezpieczenia urny?",
+        "idTipIntrebare": 0,
+        "codIntrebare": "A.11",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 20,
+            "textOptiune": "naklejka foliowa",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 21,
+            "textOptiune": "opaska samozaciskowa",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 22,
+            "textOptiune": "opieczetowany i podpisany pasek papieru",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 23,
+            "textOptiune": "inne",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 11,
+        "textIntrebare": "Jesli plomba byla oznaczona unikatowym numerem, czy zostal on wprowadzony do protokolu wewnetrznego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.12",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 24,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 25,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 12,
+        "textIntrebare": "Czy komisja sprawdzila przed rozpoczeciem glosowania czy w lokalu i na zewnatrz nie ma zadnych materialów agitacyjnych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.13",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 26,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 27,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 13,
+        "textIntrebare": "Czy karty do glosowania znajdujace sie w lokalu sa wlasciwie zabezpieczone i  nie maja do nich dostepu osoby postronne?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.14",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 28,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 29,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 14,
+        "textIntrebare": "Czy komisja realizuje procedury zwiazane z otwarciem lokalu wyborczego ze zrozumieniem, a czlonkowie komisji wiedza jakie czynnosci maja wykonywac?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.15",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 30,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 31,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 15,
+        "textIntrebare": "Czy komisja otworzyla lokal wyborczy dla wyborców o godz. 7.00?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.16",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 32,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 33,
+            "textOptiune": "nie, opóznienie 1-15 min",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 34,
+            "textOptiune": "nie, opóznienie 16-30",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 35,
+            "textOptiune": "nie, opóznienie 30-1h",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 36,
+            "textOptiune": "nie opóznienie > 1h",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 16,
+        "textIntrebare": "Czy komisja pozwolila obserwowac procedury przygotowania lokalu wyborczego do glosowania bez problemów?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.17",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 37,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 38,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 17,
+        "textIntrebare": "Czy umozliwiono obserwatorom  nagrywanie/robienie zdjec w trakcie przygotowania lokalu wyborczego do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.18",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 39,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 40,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 18,
+        "textIntrebare": "Czy w OKW byli obecni inni obserwatorzy lub mezowie zaufania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.19",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 41,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 42,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 19,
+        "textIntrebare": "Czy lokal byl na liscie dostosowanych dla os. niepelnosprawnych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.20",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 43,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 44,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 20,
+        "textIntrebare": "Czy lokal rzeczywiscie spelnial wymogi dla os. niepelnosprawnych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.21",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 45,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 46,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 21,
+        "textIntrebare": "Czy w lokalu wyborczym lub na terenie, na którym sie on znajduje byla prowadzona agitacja wyborcza?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.22",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 47,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 48,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 22,
+        "textIntrebare": "Jak oceniasz wiedze OKW odnosnie procesu wyborczego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.23",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 49,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 50,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 51,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 52,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 23,
+        "textIntrebare": "Ocena pracy OKW",
+        "idTipIntrebare": 1,
+        "codIntrebare": "A.24",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 53,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 54,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 55,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 56,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "codSectiune": "3",
+    "descriere": "not used",
+    "intrebari": [
+      {
+        "idIntrebare": 86,
+        "textIntrebare": "Rozpoczecie pracy przez OKW2",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C2.01",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 179,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 87,
+        "textIntrebare": "Czy czlonkowie OKW2 ustalili na podstawie spisu wyborców liczbe osób uprawnionych do glosowania oraz liczbe wyborców, którym wydano karty do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.02",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 180,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 181,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 88,
+        "textIntrebare": "Czy czlonkowie OKW2 umiescili niewykorzystane karty do glosowania w opakowaniach zbiorczych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.03",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 182,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 183,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 89,
+        "textIntrebare": "Czy policzona zostala ogólna liczba wyborców uprawnionych do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.04",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 184,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 185,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 90,
+        "textIntrebare": "Czy ustalona zostala liczba wydanych kart do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.05",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 186,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 187,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 91,
+        "textIntrebare": "Czy liczby oddanych glosów i niewykorzystanych kart do glosowania zgadzaja sie z liczba otrzymanych kart do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.06",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 188,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 189,
+            "textOptiune": "nie",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 92,
+        "textIntrebare": "Czy policzone zostaly na poczatku glosy oddane poprzez glosowanie korespondencyjne?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.07",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 190,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 191,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 93,
+        "textIntrebare": "Czy w trakcie wyjmowania glosów z urny mialy miejsce problemy?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.08",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 192,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 193,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 94,
+        "textIntrebare": "Czy plomby na urnie oraz plomba otworu urny byly w nienaruszonym stanie?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.09",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 194,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 195,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 95,
+        "textIntrebare": "Czy komisja rozdzielila prawidlowo karty do glosowania w poszczególnych wyborach (rady, sejmiki, wójtowie, itp.) i je policzyla?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.10",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 196,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 197,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 96,
+        "textIntrebare": "Ile bylo kart przedartych",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C2.11",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 198,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 97,
+        "textIntrebare": "Czy komisja wydzielila i policzyla karty niewazne?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.12",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 199,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 200,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 98,
+        "textIntrebare": "Ile bylo kart bez pieczatki OKW?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C2.13",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 201,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 99,
+        "textIntrebare": "Czy komisja policzyla karty wazne?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.14",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 202,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 203,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 100,
+        "textIntrebare": "Czy osoby majace olówki lub dlugopisy dotykaja kart wyborczych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.15",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 204,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 205,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 101,
+        "textIntrebare": "Czy czlonkowie komisji pracowali wspólnie w trakcie prowadzonej obserwacji?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.16",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 206,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 207,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 102,
+        "textIntrebare": "Jak oceniasz wiedze OKW 2 odnosnie procesu wyborczego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.17",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 208,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 209,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 210,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 211,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 103,
+        "textIntrebare": "Ocena pracy OKW2:",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C2.18",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 212,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 213,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 214,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 215,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      }
+    ]
+  }
+]

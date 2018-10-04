@@ -1,0 +1,239 @@
+[
+  {
+    "codSectiune": "5",
+    "descriere": "not used",
+    "intrebari": [
+      {
+        "idIntrebare": 118,
+        "textIntrebare": "Czas rozpoczecia wprowadzania projektów protokolów do WOW",
+        "idTipIntrebare": 2,
+        "codIntrebare": "D.01",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 238,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 119,
+        "textIntrebare": "Czas zakonczenia pracy OKW 2",
+        "idTipIntrebare": 2,
+        "codIntrebare": "D.02",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 239,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 120,
+        "textIntrebare": "Czy mezowie zaufania lub czlonkowie komisji wniesli jakies uwagi do protokolu?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.03",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 240,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 241,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 121,
+        "textIntrebare": "Czy komisja ustosunkowala sie do tych uwag?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.04",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 242,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 243,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 244,
+            "textOptiune": "brak uwag",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 122,
+        "textIntrebare": "Czy system elektronicznego przekazywania danych wykazal bledy?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.05",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 245,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 246,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 123,
+        "textIntrebare": "Czy systemu elektronicznego przekazywania danych wykazal ostrzezenia?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.06",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 247,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 248,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 124,
+        "textIntrebare": "Czy do projektów protokolów zostaly wprowadzone zmiany, które spowodowaly koniecznosc ponownego wydrukowania wszystkich protokolów?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.07",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 249,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 250,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 125,
+        "textIntrebare": "Czy wszyscy obecni czlonkowie komisji podpisali wydrukowane protokoly",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.08",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 251,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 252,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 126,
+        "textIntrebare": "Czy kazdy obserwator spoleczny i maz zaufania, który o to poprosil, otrzymal kopie protokolu ?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.09",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 253,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 254,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 127,
+        "textIntrebare": "Czy  komisja wywiesila w widocznym miejscu protokól?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.10",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 255,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 256,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 128,
+        "textIntrebare": "Jak oceniasz wiedze OKW 2 odnosnie procesu wyborczego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.11",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 257,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 258,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 259,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 260,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 129,
+        "textIntrebare": "Ocena pracy OKW2:",
+        "idTipIntrebare": 1,
+        "codIntrebare": "D.12",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 261,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 262,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 263,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 264,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      }
+    ]
+  }
+]

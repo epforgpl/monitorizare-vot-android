@@ -1,0 +1,692 @@
+[
+  {
+    "codSectiune": "1",
+    "descriere": "not used",
+    "intrebari": [
+      {
+        "idIntrebare": 24,
+        "textIntrebare": "Liczba wyborców w spisie OKW",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.01",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 57,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 25,
+        "textIntrebare": "Liczba czlonków OKW1",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.02",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 58,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 26,
+        "textIntrebare": "Liczba kobiet w skladzie komisji OKW1",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.03",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 59,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 27,
+        "textIntrebare": "Najnizsza liczba obecnych czlonków OKW 1 (w czasie obserwacji)",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.04",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 60,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 28,
+        "textIntrebare": "Czy zawsze obecny byl przewodniczacy lub z-ca przewodniczacego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.05",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 61,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 62,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 29,
+        "textIntrebare": "Liczba wyborców, która zaglosowala w trakcie obserwacji",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.06",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 63,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 30,
+        "textIntrebare": "Liczba wyborców, która zaglosowala do momentu przybycia do lokalu wyb. (zapytac komisje)",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.07",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 64,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 31,
+        "textIntrebare": "Czy komisja jest prawidlowo oznaczona - na zewnatrz lokalu wyborczego, jak i wewnatrz?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.08",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 65,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 66,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 32,
+        "textIntrebare": "Czy w danym lokalu znajduje sie tylko jedna OKW?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.09",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 67,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 68,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 33,
+        "textIntrebare": "Czy lokal byl na liscie dostosowanych dla os. niepelnosprawnych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.10",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 69,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 70,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 34,
+        "textIntrebare": "Czy lokal rzeczywiscie spelnial wymogi dla os. niepelnosprawnych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.11",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 71,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 72,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 35,
+        "textIntrebare": "Czy w lokalu wyborczym lub terenie, na którym sie on znajduje byla prowadzona agitacja wyborcza?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.12",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 73,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 74,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 36,
+        "textIntrebare": "Czy w OKW byli obecni inni obserwatorzy lub mezowie zaufania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.13",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 75,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 76,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 37,
+        "textIntrebare": "Czy czlonkowie OKW1 sprawdzaja dokument tozsamosci zawierajacy zdjecie glosujacych?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.14",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 77,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 78,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 38,
+        "textIntrebare": "Czy czlonkowie komisji  korzystali z oslon na dane osobowe?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.15",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 79,
+            "textOptiune": "zawsze",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 80,
+            "textOptiune": "czesto",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 81,
+            "textOptiune": "czasami",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 82,
+            "textOptiune": "nigdy",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 39,
+        "textIntrebare": "Ilu wyborców ( w trakcie prowadzonej obserwacji) poprosilo o zaswiadczenie potwierdzajace udzial w glosowaniu w trakcie prowadzonej obserwacji?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.16",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 83,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 40,
+        "textIntrebare": "Czy glosujacym wydawana jest odpowiednia liczba kart do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.17",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 84,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 85,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 41,
+        "textIntrebare": "Czy w lokalu wyborczym znajduja sie wymagane obwieszczenia i informacje o sposobie glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.18",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 86,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 87,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 42,
+        "textIntrebare": "Czy w lokalu wyborczym znajduje sie wystarczajaca liczba miejsc zapewniajacych tajnosc glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.19",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 88,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 89,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 43,
+        "textIntrebare": "Czy w miejscach zapewniajacych tajnosc glosowania jest wystarczajaco duzo swiatla, aby mozna bylo oddac glos?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.20",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 90,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 91,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 44,
+        "textIntrebare": "Czy wszystkie karty do glosowania wydawane wyborcom, które zaobserwowales sa prawidlowo opieczetowane?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.21",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 92,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 93,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 45,
+        "textIntrebare": "Czy urna jest prawidlowo zaplombowana?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.22",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 94,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 95,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 46,
+        "textIntrebare": "Jaki byl rodzaj plomby uzytej do zabezpieczenia urny",
+        "idTipIntrebare": 0,
+        "codIntrebare": "B.23",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 96,
+            "textOptiune": "naklejka foliowa",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 97,
+            "textOptiune": "opaska samozaciskowa",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 98,
+            "textOptiune": "opieczetowany i podpisany pasek papieru",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 99,
+            "textOptiune": "inne",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 47,
+        "textIntrebare": "Jesli plomba byla oznaczona unikatowym numerem, czy zostal on wprowadzony do protokolu wewnetrznego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.24",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 100,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 101,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 48,
+        "textIntrebare": "Czy czlonek komisji pelni dyzur przy urnie?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.25",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 102,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 103,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 49,
+        "textIntrebare": "Czy spisy wyborców sa poszeregowane i uporzadkowane?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.26",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 104,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 105,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 50,
+        "textIntrebare": "Czy w trakcie obserwacji nastapilo dopisanie wyborcy do spisu?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.27",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 106,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 107,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 51,
+        "textIntrebare": "Czy dopisanie wyborcy do spisu odbylo sie zgodnie z procedura?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.28",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 108,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 109,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 52,
+        "textIntrebare": "Czy zaobserwowales przypadki nieuprawnionego glosowania ‘za kogos’ lub glosowania ‘rodzinnego’?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.29",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 110,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 111,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 53,
+        "textIntrebare": "Czy zaobserwowales przypadki próby wyniesienia karty do glosowania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.30",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 112,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 113,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 54,
+        "textIntrebare": "Czy glosujacy wykonywali zdjecia swoich kart ?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.31",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 114,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 115,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 55,
+        "textIntrebare": "Czy przestrzegana jest tajnosc glosowania ?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.32",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 116,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 117,
+            "textOptiune": "nie",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 56,
+        "textIntrebare": "Czy byly przerwy w glosowaniu?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.33",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 118,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 119,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 57,
+        "textIntrebare": "Czy w lokalu byly osoby nieuprawnione?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.34",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 120,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 121,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 58,
+        "textIntrebare": "Ilu wyborców ( w trakcie prowadzonej obserwacji) poprosilo o zaswiadczenie potwierdzajace udzial w glosowaniu w trakcie prowadzonej obserwacji?",
+        "idTipIntrebare": 2,
+        "codIntrebare": "B.35",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 122,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 59,
+        "textIntrebare": "Czy komisja pozwolila ci obserwowac proces glosowania bez problemów?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.36",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 123,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 124,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 60,
+        "textIntrebare": "Jak oceniasz wiedze OKW odnosnie procesu wyborczego?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.37",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 125,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 126,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 127,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 128,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 61,
+        "textIntrebare": "Ocena pracy OKW1",
+        "idTipIntrebare": 1,
+        "codIntrebare": "B.38",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 129,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 130,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 131,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 132,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      }
+    ]
+  }
+]

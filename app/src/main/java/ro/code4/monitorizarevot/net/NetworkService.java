@@ -1,5 +1,7 @@
 package ro.code4.monitorizarevot.net;
 
+import android.content.res.AssetManager;
+
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
@@ -53,11 +55,16 @@ public class NetworkService {
 
     private static ApiService mApiService;
 
-    private static ApiService getApiService() {
+    private static AssetManager assetManager;
+    public static void setAssetManager(AssetManager assetManager) {
+        NetworkService.assetManager = assetManager;
+    }
+
+    public static ApiService getApiService() {
         if (mApiService == null) {
             boolean mockAPIMode = false; // TODO take that from build settings somehow
             if (mockAPIMode) {
-                mApiService = new DumbApiService();
+                mApiService = new DumbApiService(assetManager);
             } else {
                 mApiService = initRetrofitInstanceWithUrl(BuildConfig.WEB_BASE_URL).create(ApiService.class);
             }

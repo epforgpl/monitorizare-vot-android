@@ -51,6 +51,8 @@ public class LoginActivity extends BaseActivity {
         });
 
         setAppVersion((TextView) findViewById(R.id.app_version));
+
+        NetworkService.setAssetManager(getAssets());
     }
 
     @Override

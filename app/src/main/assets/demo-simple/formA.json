@@ -1,0 +1,17 @@
+String q = "{\"idIntrebare\":1, \"textIntrebare\":\"To be, or not to be\", \"codIntrebare\":\"Q1.1\", \"idTipIntrebare\":2, "
++ "\"raspunsuriDisponibile\": ["
++ "{\"idOptiune\": 1, \"textOptiune\": \"Option 1\", \"seIntroduceText\": false}, "
++ "{\"idOptiune\": 2, \"textOptiune\": \"Option 2, provide more details\", \"seIntroduceText\": true}"
++ "], "
++ " \"branchQuestionAnswer\": null}";
+
+String q2 = "{\"idIntrebare\":2, \"textIntrebare\":\"To be, to work, to drink\", \"codIntrebare\":\"Q1.2\", \"idTipIntrebare\":0, "
++ "\"raspunsuriDisponibile\": ["
++ "{\"idOptiune\": 3, \"textOptiune\": \"To be\", \"seIntroduceText\": false}, "
++ "{\"idOptiune\": 4, \"textOptiune\": \"To work\", \"seIntroduceText\": false}, "
++ "{\"idOptiune\": 5, \"textOptiune\": \"To drink\", \"seIntroduceText\": false} "
++ "], "
++ " \"branchQuestionAnswer\": null}";
+
+sections.add(gson.fromJson("{\"codSectiune\": \"unused\", \"descriere\":\"Form description\", \"intrebari\":"
++ "[" + q + ", " + q2 + "]}", Section.class));

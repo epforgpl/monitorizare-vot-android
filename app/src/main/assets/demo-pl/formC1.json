@@ -1,0 +1,430 @@
+[
+  {
+    "codSectiune": "2",
+    "descriere": "not used",
+    "intrebari": [
+      {
+        "idIntrebare": 62,
+        "textIntrebare": "Liczba wyborców w spisie OKW",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.01",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 133,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 63,
+        "textIntrebare": "Liczba czlonków OKW1",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.02",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 134,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 64,
+        "textIntrebare": "Liczba kobiet wsród czlonków komisji wyborczej (OKW 1)",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.03",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 135,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 65,
+        "textIntrebare": "Najnizsza liczba obecnych czlonków OKW 1 (w czasie obserwacji)",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.04",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 136,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 66,
+        "textIntrebare": "Liczba czlonków OKW2",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.05",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 137,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 67,
+        "textIntrebare": "Liczba kobiet wsród czlonków komisji wyborczej (OKW 2)",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.06",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 138,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 68,
+        "textIntrebare": "Najnizsza liczba obecnych czlonków OKW 2 (w czasie obserwacji)",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.07",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 139,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 69,
+        "textIntrebare": "Czy komisja ma zapewniona obsluge informatyczna?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.08",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 140,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 141,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 70,
+        "textIntrebare": "Czy lokal wyborczy zostal zamkniety o godz. 21.00?\nJesli nie to jakie bylo opóznienie?\n1-15 min / 16-30/30-1h/ x>1h",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.09",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 142,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 143,
+            "textOptiune": "nie wiem",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 144,
+            "textOptiune": "nie, opóznienie 1-15 min",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 145,
+            "textOptiune": "nie, opóznienie 16-30",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 146,
+            "textOptiune": "nie, opóznienie 30-1h",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 147,
+            "textOptiune": "nie opóznienie > 1h",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 71,
+        "textIntrebare": "Czy wszyscy wyborcy znajdujacy sie w lokalu w momencie zamkniecia mogli oddac glos?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.10",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 148,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 149,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 72,
+        "textIntrebare": "Czy w momencie zamkniecia lokalu, obecna byla wymagana liczba (minimum 2/3) czlonków OKW1 i OKW 2?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.11",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 150,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 151,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 73,
+        "textIntrebare": "Czy po zamknieciu lokalu  i opuszczeniu go przez wszystkich wyborców w OKW byly osoby nieuprawnione?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.12",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 152,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 153,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 74,
+        "textIntrebare": "Czy przewodniczacy OKW1 razem z przewodniczacym OKW2 opieczetowali otwór urny wyborczej?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.13",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 154,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 155,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 75,
+        "textIntrebare": "Czy przewodniczacy OKW1 w obecnosci wszystkich czlonków OKW1 i OKW2 przekazal przewodniczacemu OKW2 wszystkie wymagane materialy?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.14",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 156,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 157,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 76,
+        "textIntrebare": "Czy czlonkowie OKW1 w obecnosci czlonków OKW2 oraz przewodniczacych OKW1 i OKW2 ustalili liczbe\nOtrzymanych kart kazdego rodzaju",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.15",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 158,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 159,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 77,
+        "textIntrebare": "Czy czlonkowie OKW1 w obecnosci czlonków OKW2 oraz przewodniczacych OKW1 i OKW2 ustalili liczbe:\nniewykorzystanych kart do glosowania",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.16",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 160,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 161,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 78,
+        "textIntrebare": "Czy czlonkowie OKW1 w obecnosci czlonków OKW2 oraz przewodniczacych OKW1 i OKW2 ustalili liczbe:\naktów pelnomocnictwa",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.17",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 162,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 163,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 79,
+        "textIntrebare": "Czy czlonkowie OKW1 w obecnosci czlonków OKW2 oraz przewodniczacych OKW1 i OKW2 ustalili liczbe:\nWyborców korzystajacych z nakladek w alfabecie Braile’a",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.18",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 164,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 165,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 80,
+        "textIntrebare": "Czy wystapila róznica pomiedzy suma kart wydanych wyborcom i kart niewykorzystanych a liczba kart otrzymanych przez komisje",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.19",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 166,
+            "textOptiune": "tak",
+            "seIntroduceText": true
+          },
+          {
+            "idOptiune": 167,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 81,
+        "textIntrebare": "Czy protokól przekazania byl poprawiany?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.20",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 168,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 169,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 82,
+        "textIntrebare": "Czy protokól przekazania otrzymali wszyscy którzy o to poprosili?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.21",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 170,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 171,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 83,
+        "textIntrebare": "Czy czlonkowie OKW1 opuscili lokal wyborczy po podpisaniu protokolu przekazania?",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.22",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 172,
+            "textOptiune": "tak",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 173,
+            "textOptiune": "nie",
+            "seIntroduceText": false
+          }
+        ]
+      },
+      {
+        "idIntrebare": 84,
+        "textIntrebare": "Czas opuszczenia lokalu przez czlonków OKW 1",
+        "idTipIntrebare": 2,
+        "codIntrebare": "C.23",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 174,
+            "textOptiune": "Kliknij i wpisz",
+            "seIntroduceText": true
+          }
+        ]
+      },
+      {
+        "idIntrebare": 85,
+        "textIntrebare": "Ocena pracy OKW1",
+        "idTipIntrebare": 1,
+        "codIntrebare": "C.24",
+        "raspunsuriDisponibile": [
+          {
+            "idOptiune": 175,
+            "textOptiune": "bardzo dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 176,
+            "textOptiune": "dobra",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 177,
+            "textOptiune": "zla",
+            "seIntroduceText": false
+          },
+          {
+            "idOptiune": 178,
+            "textOptiune": "bardzo zla",
+            "seIntroduceText": false
+          }
+        ]
+      }
+    ]
+  }
+]

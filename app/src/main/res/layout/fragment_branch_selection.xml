@@ -14,9 +14,11 @@
         android:paddingRight="@dimen/activity_horizontal_margin">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/section_header_height"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="@dimen/header_margin_vertial"
+            android:layout_marginBottom="@dimen/header_margin_vertial">
 
             <ImageView
                 android:layout_width="@dimen/icon_block_size"
@@ -54,6 +56,20 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/label"
                 android:text="@string/branch_county"/>
+
+            <ro.code4.monitorizarevot.util.NoDefaultSpinner
+                android:id="@+id/branch_selector_district_level1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/background_spinner"
+                android:prompt="@string/spinner_choose"/>
+
+            <ro.code4.monitorizarevot.util.NoDefaultSpinner
+                android:id="@+id/branch_selector_district_level2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/background_spinner"
+                android:prompt="@string/spinner_choose"/>
 
             <ro.code4.monitorizarevot.util.NoDefaultSpinner
                 android:id="@+id/branch_selector_county"

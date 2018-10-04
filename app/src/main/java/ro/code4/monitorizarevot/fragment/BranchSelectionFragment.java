@@ -3,7 +3,6 @@ package ro.code4.monitorizarevot.fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,6 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,18 +25,16 @@ import java.util.Map;
 
 import ro.code4.monitorizarevot.BaseFragment;
 import ro.code4.monitorizarevot.R;
-import ro.code4.monitorizarevot.constants.County;
 import ro.code4.monitorizarevot.db.Data;
 import ro.code4.monitorizarevot.db.Preferences;
-import ro.code4.monitorizarevot.net.model.BranchDetails;
 import ro.code4.monitorizarevot.net.model.District;
 
 public class BranchSelectionFragment extends BaseFragment {
     private Spinner districtsSpinner1;
     private Spinner districtsSpinner2;
-    private Spinner countySpinner; // level3
+    private Spinner districtsSpinner3; // level3
     private EditText branchNumber;
-    private County selectedCounty;
+    private District selectedDistrict;
 
     public static BranchSelectionFragment newInstance() {
         return new BranchSelectionFragment();
@@ -49,22 +45,76 @@ public class BranchSelectionFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_branch_selection, container, false);
 
+        // TODO make it dynamic and dependent on the API data? #62
         districtsSpinner1 = rootView.findViewById(R.id.branch_selector_district_level1);
         districtsSpinner2 = rootView.findViewById(R.id.branch_selector_district_level2);
-        countySpinner = rootView.findViewById(R.id.branch_selector_county);
+        districtsSpinner3 = rootView.findViewById(R.id.branch_selector_county);
         branchNumber = rootView.findViewById(R.id.branch_number_input);
 
-        districtsSpinner2.setEnabled(false);
-        branchNumber.setEnabled(false);
-
-        List<District> districts = Data.getInstance().getDistricts(1);
-        if (districts.isEmpty()) {
+        // load data
+        List<District> topDistricts = Data.getInstance().getDistricts(1);
+        if (topDistricts.isEmpty()) {
             loadDataFromJson();
+            topDistricts = Data.getInstance().getDistricts(1);
         }
 
-        // TODO
-        setLevel1Dropdown(districtsSpinner1, District.extractTitles(districts));
-        // setCountiesDropdown(countySpinner, District.extractTitles(districts));
+        if (Preferences.hasBranch()) {
+            String selectedDistrictId = Preferences.getCountyCode();
+
+            District l3 = Data.getInstance().getDistrict(selectedDistrictId);
+            District l2 = Data.getInstance().getDistrictParent(l3);
+            District l1 = Data.getInstance().getDistrictParent(l2);
+
+            setOptions(districtsSpinner1, topDistricts, l1, false);
+            setOptions(districtsSpinner2, Data.getInstance().getDistrictsOf(l1.getId()), l2, false);
+            setOptions(districtsSpinner3, Data.getInstance().getDistrictsOf(l2.getId()), l3, false);
+
+            selectedDistrict = l3;
+
+            branchNumber.setText(String.valueOf(Preferences.getBranchNumber()));
+
+            districtsSpinner2.setEnabled(true);
+            districtsSpinner3.setEnabled(true);
+            branchNumber.setEnabled(true);
+
+        } else {
+            setOptions(districtsSpinner1, topDistricts,
+                    Data.getInstance().getDistrict("140000"), true);
+
+            districtsSpinner2.setEnabled(true);
+            districtsSpinner3.setEnabled(false);
+            branchNumber.setEnabled(false);
+        }
+
+
+        setItemsSelectedListener(districtsSpinner1, (d) -> {
+            districtsSpinner2.setEnabled(true);
+            districtsSpinner3.setEnabled(false);
+            branchNumber.setEnabled(false);
+
+            selectedDistrict = null;
+            branchNumber.setText("");
+
+            setOptions(districtsSpinner2, Data.getInstance().getDistrictsOf(d.getId()));
+        });
+
+        setItemsSelectedListener(districtsSpinner2, (e) -> {
+            districtsSpinner3.setEnabled(true);
+            branchNumber.setEnabled(false);
+
+            selectedDistrict = null;
+            branchNumber.setText("");
+
+            setOptions(districtsSpinner3, Data.getInstance().getDistrictsOf(e.getId()));
+        });
+
+        setItemsSelectedListener(districtsSpinner3, (f) -> {
+            branchNumber.setEnabled(true);
+
+            selectedDistrict = f;
+            branchNumber.setText("");
+        });
+
         setContinueButton(rootView.findViewById(R.id.button_continue));
 
         return rootView;
@@ -73,29 +123,41 @@ public class BranchSelectionFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (Preferences.hasBranch()) {
-            // TODO
-            countySpinner.setSelection(County.getIndexByCountyCode(Preferences.getCountyCode()));
-            branchNumber.setText(String.valueOf(Preferences.getBranchNumber()));
-            branchNumber.setEnabled(true);
+    }
+
+    private interface OnSelectedDistrict {
+        void onSelected(District d);
+    }
+
+    private void setOptions(Spinner dropdown, List<District> options) {
+        setOptions(dropdown, options, null, false);
+    }
+
+    private void setOptions(Spinner dropdown, List<District> options, District selected, boolean fireListeners) {
+        ArrayAdapter<District> countyAdapter = new ArrayAdapter<>(getActivity(),
+                R.layout.support_simple_spinner_dropdown_item, options);
+
+        dropdown.setAdapter(countyAdapter);
+        if (selected != null) {
+            // use animate false in order not to fire listeners
+            if (fireListeners)
+                dropdown.setSelection(options.indexOf(selected));
+            else
+                dropdown.setSelection(options.indexOf(selected), fireListeners);
         }
     }
 
-    private void setCountiesDropdown(Spinner dropdown, List<String> options) {
-        ArrayAdapter<String> countyAdapter = new ArrayAdapter<>(getActivity(),
-                R.layout.support_simple_spinner_dropdown_item, County.getCountiesNames());
-
-        dropdown.setAdapter(countyAdapter);
+    private void setItemsSelectedListener(Spinner dropdown, final OnSelectedDistrict listener) {
         dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selectedCounty = County.getCountyByIndex(position);
-                branchNumber.setEnabled(true);
+                District d = (District) dropdown.getSelectedItem();
+
+                listener.onSelected(d);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
     }
@@ -104,13 +166,13 @@ public class BranchSelectionFragment extends BaseFragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (selectedCounty == null) {
+                if (selectedDistrict == null) {
                     Toast.makeText(getActivity(), R.string.invalid_branch_county, Toast.LENGTH_SHORT).show();
                 } else if (branchNumber.getText().toString().length() == 0) {
                     Toast.makeText(getActivity(), R.string.invalid_branch_number, Toast.LENGTH_SHORT).show();
                 } else if (getBranchNumber() <= 0) {
-                    Toast.makeText(getActivity(), R.string.invalid_branch_number_minus, Toast.LENGTH_SHORT).show();
-                } else if (getBranchNumber() > selectedCounty.getBranchesCount()) {
+                    Toast.makeText(getActivity(), R.string.invalid_branch_number, Toast.LENGTH_SHORT).show();
+                } else if (getBranchNumber() > selectedDistrict.getBranchesCount()) {
                     Toast.makeText(getActivity(), getBranchExceededError(), Toast.LENGTH_SHORT).show();
                 } else {
                     persistSelection();
@@ -131,7 +193,9 @@ public class BranchSelectionFragment extends BaseFragment {
     }
 
     private void persistSelection() {
-        Preferences.saveCountyCode(County.getCountyByIndex(countySpinner.getSelectedItemPosition()).getCode());
+        District d = (District) districtsSpinner3.getSelectedItem();
+
+        Preferences.saveCountyCode(d.getId());
         Preferences.saveBranchNumber(getBranchNumber());
     }
 
@@ -145,9 +209,10 @@ public class BranchSelectionFragment extends BaseFragment {
 
     public String getBranchExceededError() {
         return getString(R.string.invalid_branch_number_max,
-                selectedCounty.getName(), String.valueOf(selectedCounty.getBranchesCount()));
+                selectedDistrict.getTitle(), String.valueOf(selectedDistrict.getBranchesCount()));
     }
 
+    // TODO make it dynamic and dependent on the API data? #62
     private void loadDataFromJson() {
         BufferedReader br = null;
         try {

@@ -134,7 +134,7 @@ public class Data {
         RealmResults<District> results = realm
                 .where(District.class)
                 .equalTo("level", level)
-                .findAll();
+                .findAllSorted("title");
 
         List<District> result = realm.copyFromRealm(results);
         realm.close();
@@ -147,12 +147,41 @@ public class Data {
         RealmResults<District> results = realm
                 .where(District.class)
                 .equalTo("parentId", parentDistrictId)
-                .findAll();
+                .findAllSorted("title");
 
         List<District> result = realm.copyFromRealm(results);
         realm.close();
 
         return result;
+    }
+
+    public District getDistrict(String id) {
+        Realm realm = Realm.getDefaultInstance();
+
+        District district = realm
+                .where(District.class)
+                .equalTo("id", id)
+                .findFirst();
+
+        district = district != null ? realm.copyFromRealm(district) : null;
+        realm.close();
+
+        return district;
+
+    }
+
+    public District getDistrictParent(District district) {
+        Realm realm = Realm.getDefaultInstance();
+
+        district = realm
+                .where(District.class)
+                .equalTo("id", district.getParentId())
+                .findFirst();
+
+        district = district != null ? realm.copyFromRealm(district) : null;
+        realm.close();
+
+        return district;
     }
 
     public void saveDistricts(List<District> districts) {

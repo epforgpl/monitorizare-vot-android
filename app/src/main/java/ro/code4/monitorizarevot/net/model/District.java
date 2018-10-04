@@ -1,8 +1,5 @@
 package ro.code4.monitorizarevot.net.model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -23,13 +20,8 @@ public class District extends RealmObject {
 
     private int branchesCount = 0;
 
-    public static List<String> extractTitles(Collection<District> c) {
-        List<String> titles = new ArrayList<>();
-        for(District d : c) {
-            titles.add(d.getTitle());
-        }
-        return titles;
-    }
+    @SuppressWarnings("unused")
+    public District() {}
 
     public District(String id, int level, String title, String parentId) {
         this.id = id;
@@ -60,5 +52,23 @@ public class District extends RealmObject {
 
     public void incrementBranchesCount() {
         this.branchesCount++;
+    }
+
+    @Override
+    public String toString() {
+        return title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        District district = (District) o;
+        return id.equals(district.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 }

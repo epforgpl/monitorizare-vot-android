@@ -11,7 +11,7 @@
     <string name="button_send">Wyślij</string>
     <string name="spinner_choose">Wybierz</string>
     <string name="hint_time">hh:mm</string>
-    <string name="empty" />
+    <string name="empty"/>
 
     <string name="error_permission">Błąd dostępu %1$S</string>
     <string name="error_question_type">Nieznany typ pytania. Skontaktuj się z administratorem.</string>
@@ -46,14 +46,9 @@
     <string name="branch_number">Numer komisji wyborczej</string>
     <string name="branch_change">Zmień komisję</string>
 
-    <!--
-    <string name="branch_question_environment">Choose the area of the station</string>
-    <string name="branch_answer_rural">Rural</string>
-    <string name="branch_answer_urban">Urban</string>
-    <string name="branch_answer_man">Man</string>
-    <string name="branch_answer_woman">Woman</string>
-    -->
-    <string name="branch_question_sex">Komisji wyborczej przewodniczy</string>
+    <string name="branch_question_environment">Wybierz typ obwodu</string>
+    <string name="branch_answer_rural">Wiejski</string>
+    <string name="branch_answer_urban">Miejski</string>
 
     <string name="branch_question_enter">Czas rozpoczęcia obserwacji</string>
     <string name="branch_question_leave">Czas zakończenia obserwacji</string>

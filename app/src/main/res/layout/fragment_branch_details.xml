@@ -44,6 +44,8 @@
                 style="@style/radioButton" />
         </RadioGroup>
 
+        <!--
+        We are not asking for it in Polish version
         <View style="@style/horizontalSeparator" />
 
         <TextView
@@ -78,6 +80,7 @@
         </RadioGroup>
 
         <View style="@style/horizontalSeparator" />
+        -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,6 +92,7 @@
                 android:layout_weight="1"
                 android:text="@string/branch_question_enter"
                 style="@style/label"/>
+            <!--
             <Space
                 android:layout_width="@dimen/activity_horizontal_margin"
                 android:layout_height="match_parent" />
@@ -98,6 +102,7 @@
                 android:layout_weight="1"
                 android:text="@string/branch_question_leave"
                 style="@style/label"/>
+             -->
         </LinearLayout>
 
         <LinearLayout
@@ -112,6 +117,8 @@
                 android:gravity="center"
                 android:hint="@string/hint_time"
                 style="@style/input" />
+            <!--
+            In Polish version we are asking about it in the forms
             <Space
                 android:layout_width="@dimen/activity_horizontal_margin"
                 android:layout_height="match_parent" />
@@ -123,6 +130,7 @@
                 android:gravity="center"
                 android:hint="@string/hint_time"
                 style="@style/input"/>
+            -->
         </LinearLayout>
     </LinearLayout>
     <Button

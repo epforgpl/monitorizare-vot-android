@@ -58,10 +58,10 @@
     <string name="invalid_branch_number">Podaj numer komisji wyborczej</string>
     <string name="invalid_branch_number_minus">Niepoprawny numer komisji wyborczej</string>
     <string name="invalid_branch_number_max">Niepoprawny numer komisji wyborczej dla tego obszaru [max %2$s]</string>
-    <!--
-        <string name="invalid_branch_environment">Choose urban of rural</string>
-        <string name="invalid_branch_sex">Choose man or woman</string>
-    -->
+
+    <string name="invalid_branch_environment">Wybierz typ obwodu</string>
+    <string name="invalid_branch_sex">Choose man or woman</string>
+
 
     <string name="invalid_branch_time_in">Podaj poprawny czas rozpoczęcia obserwacji</string>
 

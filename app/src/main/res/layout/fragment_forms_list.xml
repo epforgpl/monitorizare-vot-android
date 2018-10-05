@@ -13,66 +13,172 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:layout_alignParentTop="true"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignTop="@id/change_branch_bar"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_below="@id/change_branch_bar">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:clipToPadding="false">
-            <ro.code4.monitorizarevot.widget.FormSelectorCard
-                android:id="@+id/tile_form_A"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/form_card_height"
-                android:layout_weight="1"
-                app:letter="A"
-                app:text="Form A"/>
-            <Space
-                android:layout_width="@dimen/activity_horizontal_margin"
-                android:layout_height="match_parent" />
-            <ro.code4.monitorizarevot.widget.FormSelectorCard
-                android:id="@+id/tile_form_B"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/form_card_height"
-                android:layout_weight="1"
-                app:letter="B"
-                app:text="Form B"/>
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_A"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="A"
+                    app:text="Przygotowanie" />
+
+                <Space
+                    android:layout_width="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent" />
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_B"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="B"
+                    app:text="Głosowanie" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_C1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="C1"
+                    app:text="Liczenie - przekazanie" />
+
+                <Space
+                    android:layout_width="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent" />
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_C2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="C2"
+                    app:text="Liczenie - obserwacja" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_C3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="C3"
+                    app:text="Liczenie - wójt" />
+
+                <Space
+                    android:layout_width="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent" />
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_C4"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="C4"
+                    app:text="Liczenie - gmina" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_C5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="Cp"
+                    app:text="Liczenie - powiat" />
+
+                <Space
+                    android:layout_width="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent" />
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_C6"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="Cs"
+                    app:text="Liczenie - sejmik" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_D"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:letter="D"
+                    app:text="Tabulacja" />
+
+                <Space
+                    android:layout_width="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent" />
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_notes"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/form_card_height"
+                    android:layout_weight="1"
+                    app:src="@drawable/ic_notes"
+                    app:text="@string/form_notes" />
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:clipToPadding="false">
-            <ro.code4.monitorizarevot.widget.FormSelectorCard
-                android:id="@+id/tile_form_C"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/form_card_height"
-                android:layout_weight="1"
-                app:letter="C"
-                app:text="Form C"/>
-            <Space
-                android:layout_width="@dimen/activity_horizontal_margin"
-                android:layout_height="match_parent" />
-            <ro.code4.monitorizarevot.widget.FormSelectorCard
-                android:id="@+id/tile_form_notes"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/form_card_height"
-                android:layout_weight="1"
-                app:src="@drawable/ic_notes"
-                app:text="@string/form_notes"/>
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

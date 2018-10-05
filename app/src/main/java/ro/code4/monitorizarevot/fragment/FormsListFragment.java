@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import ro.code4.monitorizarevot.BaseFragment;
 import ro.code4.monitorizarevot.R;
 import ro.code4.monitorizarevot.db.Data;
@@ -27,25 +30,26 @@ public class FormsListFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_forms_list, container, false);
 
-        // TODO dynamically add forms https://github.com/code4romania/monitorizare-vot-android/issues/50
-        rootView.findViewById(R.id.tile_form_A).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showForm(Data.getInstance().getForm("A"));
-            }
-        });
-        rootView.findViewById(R.id.tile_form_B).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showForm(Data.getInstance().getForm("B"));
-            }
-        });
-        rootView.findViewById(R.id.tile_form_C).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showForm(Data.getInstance().getForm("C"));
-            }
-        });
+        // TODO dynamically add forms and create layout (Grid?) https://github.com/code4romania/monitorizare-vot-android/issues/50
+        Map<String, Integer> forms = new HashMap<>();
+        forms.put("A", R.id.tile_form_A);
+        forms.put("B", R.id.tile_form_B);
+        forms.put("C1", R.id.tile_form_C1);
+        forms.put("C2", R.id.tile_form_C2);
+        forms.put("C3", R.id.tile_form_C3);
+        forms.put("C4", R.id.tile_form_C4);
+        forms.put("C5", R.id.tile_form_C5);
+        forms.put("C6", R.id.tile_form_C6);
+        forms.put("D", R.id.tile_form_D);
+
+        for(final String formId : forms.keySet()) {
+            rootView.findViewById(forms.get(formId)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    showForm(Data.getInstance().getForm(formId));
+                }
+            });
+        }
 
         rootView.findViewById(R.id.tile_form_notes).setOnClickListener(new View.OnClickListener() {
             @Override

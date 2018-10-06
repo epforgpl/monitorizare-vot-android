@@ -63,8 +63,7 @@ public class NetworkService {
 
     private static ApiService getApiService() {
         if (mApiService == null) {
-            boolean mockAPIMode = false; // TODO take that from build settings somehow (flavor + asset resource value)
-            if (mockAPIMode) {
+            if (BuildConfig.FLAVOR_demo.equals("demo")) {
                 mApiService = new DumbApiService();
             } else {
                 mApiService = initRetrofitInstanceWithUrl(BuildConfig.WEB_BASE_URL).create(ApiService.class);

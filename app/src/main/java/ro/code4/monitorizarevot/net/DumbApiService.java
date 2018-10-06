@@ -16,6 +16,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import ro.code4.monitorizarevot.BuildConfig;
 import ro.code4.monitorizarevot.net.model.BranchDetails;
 import ro.code4.monitorizarevot.net.model.ResponseAnswerContainer;
 import ro.code4.monitorizarevot.net.model.Section;
@@ -28,7 +29,7 @@ import ro.code4.monitorizarevot.net.model.response.question.QuestionResponse;
 public class DumbApiService implements ApiService {
 
     private AssetManager assetManager;
-    private String demoDir = "demo-pl";
+    private String demoDir = "demo-" + BuildConfig.FLAVOR_elections;
 
     public void setAssetManager(AssetManager assetManager) {
         this.assetManager = assetManager;

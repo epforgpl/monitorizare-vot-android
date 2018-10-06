@@ -6,23 +6,53 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "pl.org.epf.monitorujwybory"
         minSdkVersion 17
         targetSdkVersion 27
         versionCode 12
-        versionName "0.9.8"
+        versionName "0.9.9"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "WEB_BASE_URL", '"http://viuat.azurewebsites.net/"'
+
         }
 
         debug {
             debuggable true
+            buildConfigField "String", "WEB_BASE_URL", '"http://10.0.2.2:8080/"'
+        }
+    }
+    flavorDimensions "demo", "elections"
+    productFlavors {
+        live {
+            dimension "demo"
+        }
+        demo {
+            dimension "demo"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+        }
+
+
+        // dimension: elections
+        pl2018 {
+            dimension "elections"
+            applicationId "pl.org.epf.monitorujwybory"
+            buildConfigField "String", "WEB_BASE_URL", '"https://mvapi.epf.org.pl/"'
+        }
+        ro2015 {
+            dimension "elections"
+            applicationId "ro.code4.monitorizarevot"
             buildConfigField "String", "WEB_BASE_URL", '"http://viuat.azurewebsites.net/"'
         }
+//        ro2018referendum {
+//            dimension "elections"
+//        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 

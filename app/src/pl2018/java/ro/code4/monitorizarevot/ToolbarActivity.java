@@ -39,7 +39,7 @@ public class ToolbarActivity extends BaseActivity implements Navigator {
         navigateTo(BranchSelectionFragment.newInstance());
     }
 
-    private void initNavigationDrawer() {
+    protected void initNavigationDrawer() {
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,13 +61,13 @@ public class ToolbarActivity extends BaseActivity implements Navigator {
         findViewById(R.id.menu_guide).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigateTo(GuideFragment.newInstance());
+                navigateTo(GuideFragment.newInstance(Constants.GUIDE_URL, getString(R.string.title_guide)));
             }
         });
         findViewById(R.id.menu_call).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callSupportCenter();
+                navigateTo(GuideFragment.newInstance("file:///android_asset/hotline.html", getString(R.string.menu_call)));
             }
         });
     }

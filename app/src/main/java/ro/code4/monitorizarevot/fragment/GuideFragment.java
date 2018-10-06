@@ -14,9 +14,14 @@ import ro.code4.monitorizarevot.R;
 import ro.code4.monitorizarevot.constants.Constants;
 
 public class GuideFragment extends BaseFragment {
-    public static GuideFragment newInstance() {
-        return new GuideFragment();
+    public static GuideFragment newInstance(String url, String title) {
+        GuideFragment f = new GuideFragment();
+        f.url = url;
+        f.title = title;
+        return f;
     }
+
+    private String url, title;
 
     @Nullable
     @Override
@@ -30,11 +35,11 @@ public class GuideFragment extends BaseFragment {
         WebView guideView = view.findViewById(R.id.web_view_guide);
         WebSettings webSettings = guideView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        guideView.loadUrl(Constants.GUIDE_URL);
+        guideView.loadUrl(this.url);
     }
 
     @Override
     public String getTitle() {
-        return getString(R.string.title_guide);
+        return title;
     }
 }

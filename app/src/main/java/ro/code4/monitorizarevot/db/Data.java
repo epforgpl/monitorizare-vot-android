@@ -11,6 +11,7 @@ import java.util.Map;
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmModel;
+import io.realm.RealmObject;
 import io.realm.RealmResults;
 import ro.code4.monitorizarevot.net.model.BranchDetails;
 import ro.code4.monitorizarevot.net.model.BranchQuestionAnswer;
@@ -41,7 +42,7 @@ public class Data {
         return instance;
     }
 
-    private static int getNextPrimaryKey(Realm realm, Class realmClass) {
+    private static <E extends RealmObject> int getNextPrimaryKey(Realm realm, Class<E> realmClass) {
         Number maxPrimaryKeyValue = realm.where(realmClass).max(AUTO_INCREMENT_PRIMARY_KEY);
         return maxPrimaryKeyValue != null ? maxPrimaryKeyValue.intValue() + 1 : 0;
     }

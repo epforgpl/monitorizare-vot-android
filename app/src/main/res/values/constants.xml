@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="shared_element_login_background">loginBackground</string>
-    <string name="shared_element_logo">logo</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="shared_element_login_background" tools:ignore="MissingTranslation">loginBackground</string>
+    <string name="shared_element_logo" tools:ignore="MissingTranslation">logo</string>
 </resources>

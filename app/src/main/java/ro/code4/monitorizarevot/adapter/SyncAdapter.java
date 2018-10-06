@@ -189,7 +189,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
         @Override
         public void onError(Throwable e) {
-
+            e.printStackTrace(); // TODO don't silence errors! #43
         }
 
         @Override

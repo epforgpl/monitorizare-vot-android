@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 27
-        versionCode 12
-        versionName "0.9.9"
+        versionCode 13
+        versionName "0.10.0"
     }
     buildTypes {
         release {
@@ -54,6 +54,12 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+
+    // set different content provider for each variant
+    // kudos to https://stackoverflow.com/questions/51040002/declare-variable-into-build-gradle-that-match-the-applicationid-with-flavors-suf
+    applicationVariants.all { variant ->
+        variant.resValue "string", "authorities", applicationId + '.contentprovider'
+    }
 }
 
 repositories {
@@ -79,4 +85,10 @@ dependencies {
     implementation 'net.hockeyapp.android:HockeySDK:4.1.1'
 
     implementation project(path: ':mediapicker')
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" // << "-Xlint:deprecation"
+    }
 }

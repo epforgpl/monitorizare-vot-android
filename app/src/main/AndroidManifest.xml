@@ -71,7 +71,7 @@
         </service>
         <!-- TODO if it's a a StubProvider why is it here in the first place? -->
         <provider
-            android:authorities="${applicationId}.contentprovider"
+            android:authorities="@string/authorities"
             android:name="ro.code4.monitorizarevot.util.StubProvider"
             android:exported="false"
             android:syncable="true"/>

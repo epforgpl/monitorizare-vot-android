@@ -5,7 +5,7 @@ import android.content.res.AssetManager;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -50,12 +50,9 @@ public class DumbApiService implements ApiService {
     public Call<List<Section>> getForm(final String formId) {
         return new DumbCall<List<Section>>() {
             public Response<List<Section>> execute() {
-                List<Section> sections = new ArrayList<>();
-                Gson gson = new Gson();
+                Section[] sections = (new Gson()).fromJson(loadJson(demoDir + "/form" + formId + ".json"), Section[].class);
 
-                sections.add(gson.fromJson(loadJson(demoDir + "/form" + formId + ".json"), Section.class));
-
-                return Response.success(sections);
+                return Response.success(Arrays.asList(sections));
             }
         };
     }
@@ -80,8 +77,6 @@ public class DumbApiService implements ApiService {
     }
 
     public Call<QuestionResponse> postQuestionAnswer(final ResponseAnswerContainer responseAnswer) {
-        // TODO store responseAnswer.getReponseMapperList();
-
         return new DumbCall<QuestionResponse>() {
             @Override
             public Response<QuestionResponse> execute() {

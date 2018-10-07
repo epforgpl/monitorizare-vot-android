@@ -4,10 +4,11 @@ import android.content.res.AssetManager;
 
 import com.google.gson.Gson;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -119,10 +120,15 @@ public class DumbApiService implements ApiService {
     }
 
     private String loadJson(String assetName) {
-        try {
-            return new Scanner(assetManager.open(assetName)).useDelimiter("\\Z").next();
-        } catch (IOException e) {
+       try (BufferedReader bufferedInputStream = new BufferedReader(new InputStreamReader(assetManager.open(assetName)))) {
+           StringBuilder rawJson = new StringBuilder();
+           String line;
+           while ((line = bufferedInputStream.readLine()) != null) {
+               rawJson.append(line).append('\n');
+           }
+           return rawJson.toString();
+       } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+       }
     }
 }

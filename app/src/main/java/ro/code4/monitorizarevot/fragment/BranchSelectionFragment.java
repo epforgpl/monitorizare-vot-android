@@ -214,10 +214,8 @@ public class BranchSelectionFragment extends BaseFragment {
 
     // TODO make it dynamic and dependent on the API data? #62
     private void loadDataFromJson() {
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new InputStreamReader(
-                    getActivity().getAssets().open("districts.jsonlines")));
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                    getActivity().getAssets().open("districts.jsonlines")))) {
 
             Map<String, District> districts = new HashMap<>();
 
@@ -257,14 +255,6 @@ public class BranchSelectionFragment extends BaseFragment {
             ex.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }

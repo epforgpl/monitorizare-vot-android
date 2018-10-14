@@ -237,7 +237,7 @@ public class BranchSelectionFragment extends BaseFragment {
                         break;
 
                     case "gmina":
-                        d = new District("" + obj.getInt("teryt"), 2,
+                        d = new District("" + obj.getInt("teryt"), 3,
                                 obj.getString("title"), "" + obj.getInt("teryt_parent"));
                         districts.put(d.getId(), d);
                         break;
@@ -251,9 +251,11 @@ public class BranchSelectionFragment extends BaseFragment {
 
             Data.getInstance().saveDistricts(new ArrayList<>(districts.values()));
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            Toast.makeText(getActivity(), "Wystąpił błąd: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            e.printStackTrace();
         } catch (JSONException e) {
+            Toast.makeText(getActivity(), "Wystąpił błąd: " + e.getMessage(), Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }

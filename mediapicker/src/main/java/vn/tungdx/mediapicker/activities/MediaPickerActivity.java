@@ -7,14 +7,13 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
-import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.FileObserver;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -94,7 +93,6 @@ public class MediaPickerActivity extends AppCompatActivity implements
     private File mPhotoFileCapture;
     private List<File> mFilesCreatedWhileCapturePhoto;
     private RecursiveFileObserver mFileObserver;
-    private FileObserverTask mFileObserverTask;
 
     /**
      * Start {@link MediaPickerActivity} in {@link Activity} to pick photo or
@@ -200,8 +198,6 @@ public class MediaPickerActivity extends AppCompatActivity implements
     protected void onDestroy() {
         super.onDestroy();
         getSupportFragmentManager().removeOnBackStackChangedListener(this);
-        cancelFileObserverTask();
-        stopWatchingFile();
         mFilesCreatedWhileCapturePhoto = null;
     }
 
@@ -335,18 +331,23 @@ public class MediaPickerActivity extends AppCompatActivity implements
             File file = mMediaOptions.getPhotoFile();
             if (file == null) {
                 try {
-                    file = MediaUtils.createDefaultImageFile();
+                    file = MediaUtils.createDefaultImageFile(getApplicationContext());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
             if (file != null) {
-                mPhotoFileCapture = file;
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(file));
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    Uri photoUri = FileProvider.getUriForFile(this,
+                            "ro.code4.monitorizarevot.fileprovider",
+                            file);
+                    mPhotoFileCapture = new File(photoUri.getPath());
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                } else {
+                    mPhotoFileCapture = file;
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mPhotoFileCapture));
+                }
                 startActivityForResult(takePictureIntent, REQUEST_PHOTO_CAPTURE);
-                mFileObserverTask = new FileObserverTask();
-                mFileObserverTask.execute();
             }
         }
     }
@@ -423,8 +424,6 @@ public class MediaPickerActivity extends AppCompatActivity implements
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        cancelFileObserverTask();
-        stopWatchingFile();
         if (resultCode == Activity.RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_PHOTO_CAPTURE:
@@ -609,36 +608,5 @@ public class MediaPickerActivity extends AppCompatActivity implements
         ArrayList<MediaItem> mediaItemList = intent
                 .getParcelableArrayListExtra(MediaPickerActivity.EXTRA_MEDIA_SELECTED);
         return mediaItemList;
-    }
-
-    private class FileObserverTask extends AsyncTask<Void, Void, Void> {
-
-        @Override
-        protected Void doInBackground(Void... params) {
-            if (isCancelled()) return null;
-            if (mFileObserver == null) {
-                mFileObserver = new RecursiveFileObserver(Environment
-                        .getExternalStorageDirectory().getAbsolutePath(),
-                        FileObserver.CREATE);
-                mFileObserver
-                        .setFileCreatedListener(mOnFileCreatedListener);
-            }
-            mFileObserver.startWatching();
-            return null;
-        }
-    }
-
-    private void cancelFileObserverTask() {
-        if (mFileObserverTask != null) {
-            mFileObserverTask.cancel(true);
-            mFileObserver = null;
-        }
-    }
-
-    private void stopWatchingFile() {
-        if (mFileObserver != null) {
-            mFileObserver.stopWatching();
-            mFileObserver = null;
-        }
     }
 }

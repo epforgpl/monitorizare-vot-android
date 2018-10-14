@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
@@ -52,12 +53,16 @@ public class MediaUtils {
      * @return
      * @throws IOException
      */
-    public static File createDefaultImageFile() throws IOException {
+    public static File createDefaultImageFile(Context context) throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss",
                 Locale.getDefault()).format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + ".jpg";
-        File storageDir = Environment
-                .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        String imageFileName = "IMG_" + timeStamp + ".jpg";
+        File storageDir = null;
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            storageDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        } else {
+            storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        }
         if (!storageDir.exists()) {
             storageDir.mkdirs();
         }

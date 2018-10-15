@@ -69,6 +69,17 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/syncadapter" />
         </service>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="ro.code4.monitorizarevot.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
         <!-- TODO if it's a a StubProvider why is it here in the first place? -->
         <provider
             android:authorities="@string/authorities"

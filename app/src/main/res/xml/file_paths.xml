@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <external-path name="observation_images_demo" path="Android/data/pl.org.epf.monitorujwybory.demo/files/Pictures" />
-    <external-path name="observation_images_pl2018" path="Android/data/pl.org.epf.monitorujwybory.pl2018/files/Pictures" />
-    <external-path name="observation_images_live" path="Android/data/pl.org.epf.monitorujwybory.live/files/Pictures" />
-    <external-path name="observation_images_ro2015" path="Android/data/ro.code4.monitorizarevot.ro2015/files/Pictures" />
+    <external-path name="observation_images" path="Pictures" />
 </paths>

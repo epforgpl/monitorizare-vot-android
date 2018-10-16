@@ -5,6 +5,9 @@
         <attr name="letter" format="string" />
         <attr name="text" format="string" />
     </declare-styleable>
+    <declare-styleable name="FileSelectorButton">
+        <attr name="icon" format="reference" />
+    </declare-styleable>
     <attr name="customAnswerRadioButton" format="reference" />
     <attr name="customAnswerCheckbox" format="reference" />
 </resources>

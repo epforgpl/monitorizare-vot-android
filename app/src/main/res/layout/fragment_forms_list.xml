@@ -72,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="C1"
-                    app:text="Liczenie - przekazanie" />
+                    app:text="Przekazanie" />
 
                 <Space
                     android:layout_width="@dimen/activity_horizontal_margin"
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="C2"
-                    app:text="Liczenie - obserwacja" />
+                    app:text="Liczenie - ogólne" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,55 +98,55 @@
                 android:paddingTop="@dimen/activity_vertical_margin">
 
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
-                    android:id="@+id/tile_form_C3"
+                    android:id="@+id/tile_form_Cg"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:letter="C3"
-                    app:text="Liczenie - wójt" />
+                    app:letter="Cg"
+                    app:text="Liczenie - gmina" />
 
                 <Space
                     android:layout_width="@dimen/activity_horizontal_margin"
                     android:layout_height="match_parent" />
 
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
-                    android:id="@+id/tile_form_C4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:letter="C4"
-                    app:text="Liczenie - gmina" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:orientation="horizontal"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin">
-
-                <ro.code4.monitorizarevot.widget.FormSelectorCard
-                    android:id="@+id/tile_form_C5"
+                    android:id="@+id/tile_form_Cp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="Cp"
                     app:text="Liczenie - powiat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ro.code4.monitorizarevot.widget.FormSelectorCard
+                    android:id="@+id/tile_form_Cs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:letter="Cs"
+                    app:text="Liczenie - sejmik" />
 
                 <Space
                     android:layout_width="@dimen/activity_horizontal_margin"
                     android:layout_height="match_parent" />
 
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
-                    android:id="@+id/tile_form_C6"
+                    android:id="@+id/tile_form_Cw"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:letter="Cs"
-                    app:text="Liczenie - sejmik" />
+                    app:letter="Cw"
+                    app:text="Liczenie - wójt" />
             </LinearLayout>
 
             <LinearLayout

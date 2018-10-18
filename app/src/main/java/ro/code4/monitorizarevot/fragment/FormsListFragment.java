@@ -36,10 +36,10 @@ public class FormsListFragment extends BaseFragment {
         forms.put("B", R.id.tile_form_B);
         forms.put("C1", R.id.tile_form_C1);
         forms.put("C2", R.id.tile_form_C2);
-        forms.put("C3", R.id.tile_form_C3);
-        forms.put("C4", R.id.tile_form_C4);
-        forms.put("C5", R.id.tile_form_C5);
-        forms.put("C6", R.id.tile_form_C6);
+        forms.put("Cg", R.id.tile_form_Cg);
+        forms.put("Cp", R.id.tile_form_Cp);
+        forms.put("Cs", R.id.tile_form_Cs);
+        forms.put("Cw", R.id.tile_form_Cw);
         forms.put("D", R.id.tile_form_D);
 
         for(final String formId : forms.keySet()) {

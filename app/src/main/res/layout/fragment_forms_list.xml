@@ -38,7 +38,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_A"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="A"
                     app:text="Przygotowanie" />
@@ -50,7 +50,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_B"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="B"
                     app:text="Głosowanie" />
@@ -69,7 +69,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_C1"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="C1"
                     app:text="Liczenie - przekazanie" />
@@ -81,7 +81,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_C2"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="C2"
                     app:text="Liczenie - obserwacja" />
@@ -100,7 +100,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_C3"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="C3"
                     app:text="Liczenie - wójt" />
@@ -112,7 +112,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_C4"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="C4"
                     app:text="Liczenie - gmina" />
@@ -131,7 +131,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_C5"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="Cp"
                     app:text="Liczenie - powiat" />
@@ -143,7 +143,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_C6"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="Cs"
                     app:text="Liczenie - sejmik" />
@@ -162,7 +162,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_D"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:letter="D"
                     app:text="Tabulacja" />
@@ -174,7 +174,7 @@
                 <ro.code4.monitorizarevot.widget.FormSelectorCard
                     android:id="@+id/tile_form_notes"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/form_card_height"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:src="@drawable/ic_notes"
                     app:text="@string/form_notes" />

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/question_card_height"
+    android:layout_height="wrap_content"
     android:foreground="?android:attr/selectableItemBackground">
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingStart="@dimen/activity_horizontal_margin"
             android:paddingEnd="@dimen/activity_horizontal_margin"
@@ -31,12 +31,13 @@
             android:gravity="center"
             android:textColor="@color/textPrimary"
             android:textSize="@dimen/question_overview_item_text"
-            tools:text="What is the question text? It might be longer than this, you know"/>
+            tools:text="What is the question text? It might be longer than this, you know. In fact it may be very long and span multiple lines on older devices."/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_gravity="bottom"
             style="@style/horizontalSeparator" />
         <TextView
             android:id="@+id/status"
@@ -44,6 +45,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/spacing_vertical"
             android:gravity="center"
+            android:layout_gravity="bottom"
             android:textColor="@color/hint"
             android:textSize="@dimen/question_overview_item_text"
             tools:text="Incomplete" />

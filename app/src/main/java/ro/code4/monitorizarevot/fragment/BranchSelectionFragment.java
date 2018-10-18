@@ -35,6 +35,7 @@ public class BranchSelectionFragment extends BaseFragment {
     private Spinner districtsSpinner3; // level3
     private EditText branchNumber;
     private District selectedDistrict;
+    private boolean areYouSureOfBranch = false;
 
     public static BranchSelectionFragment newInstance() {
         return new BranchSelectionFragment();
@@ -173,7 +174,14 @@ public class BranchSelectionFragment extends BaseFragment {
                 } else if (getBranchNumber() <= 0) {
                     Toast.makeText(getActivity(), R.string.invalid_branch_number, Toast.LENGTH_SHORT).show();
                 } else if (getBranchNumber() > selectedDistrict.getBranchesCount()) {
-                    Toast.makeText(getActivity(), getBranchExceededError(), Toast.LENGTH_SHORT).show();
+                    if (!areYouSureOfBranch) { // TODO hack for Poland;  to resolve in #48 and #74
+                        Toast.makeText(getActivity(), "Czy na pewno to poprawny numer komisji? Sprawdź dokładnie!", Toast.LENGTH_SHORT).show(); // hack for Poland
+                        areYouSureOfBranch = true;
+                    } else {
+                        persistSelection();
+                        navigateTo(BranchDetailsFragment.newInstance());
+                    }
+                    // Toast.makeText(getActivity(), getBranchExceededError(), Toast.LENGTH_SHORT).show();
                 } else {
                     persistSelection();
                     navigateTo(BranchDetailsFragment.newInstance());

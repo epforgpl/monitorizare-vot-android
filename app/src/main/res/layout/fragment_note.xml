@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ro.code4.monitorizarevot.widget.ScrollViewWithFixedBottom
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ro.code4.monitorizarevot.widget.ScrollViewWithFixedBottom xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/note_container"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -61,7 +61,7 @@
             android:hint="@string/note_description_hint"
             style="@style/input"/>
         <LinearLayout
-            android:id="@+id/note"
+            android:id="@+id/note_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_vertical"
@@ -78,10 +78,59 @@
                 android:layout_width="@dimen/activity_horizontal_margin"
                 android:layout_height="match_parent" />
             <ro.code4.monitorizarevot.widget.FileSelectorButton
-                android:id="@+id/note_file_selector"
+                app:icon="@drawable/ic_camera"
+                android:id="@+id/note_take_photo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/note_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/note_video"
+                style="@style/label"/>
+            <Space
+                android:layout_width="@dimen/activity_horizontal_margin"
+                android:layout_height="match_parent" />
+            <ro.code4.monitorizarevot.widget.FileSelectorButton
+                app:icon="@drawable/ic_movie"
+                android:id="@+id/note_record_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/note_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/note_file"
+                style="@style/label"/>
+            <Space
+                android:layout_width="@dimen/activity_horizontal_margin"
+                android:layout_height="match_parent" />
+            <ro.code4.monitorizarevot.widget.FileSelectorButton
+                android:id="@+id/note_pick_file"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:icon="@drawable/ic_gallery"/>
         </LinearLayout>
     </LinearLayout>
 

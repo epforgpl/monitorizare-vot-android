@@ -2,6 +2,7 @@ package ro.code4.monitorizarevot.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
@@ -14,6 +15,8 @@ public class FileSelectorButton extends FrameLayout {
     private ImageView icon;
     private TextView text;
 
+    private Integer mIconId;
+
     public FileSelectorButton(Context context) {
         super(context);
         init(context);
@@ -21,6 +24,16 @@ public class FileSelectorButton extends FrameLayout {
 
     public FileSelectorButton(Context context, AttributeSet attrs) {
         super(context, attrs);
+        TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.FileSelectorButton,
+                0, 0);
+        try {
+            mIconId = a.getResourceId(R.styleable.FileSelectorButton_icon, R.id.file_selector_icon);
+        } finally {
+            a.recycle();
+        }
+
         init(context);
     }
 
@@ -39,6 +52,7 @@ public class FileSelectorButton extends FrameLayout {
         inflate(context, R.layout.widget_file_selector, this);
 
         icon = findViewById(R.id.file_selector_icon);
+        icon.setImageDrawable(getResources().getDrawable(mIconId));
         text = findViewById(R.id.file_selector_text);
 
         showIcon();

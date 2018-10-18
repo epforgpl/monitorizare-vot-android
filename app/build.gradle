@@ -10,6 +10,9 @@ android {
         targetSdkVersion 27
         versionCode 15
         versionName "0.10.2"
+
+        buildConfigField "String", "TIME_FORMAT", '"HH:mm"'
+        buildConfigField "String", "DATE_FORMAT", '"yyyy-MM-dd HH:mm:ss"'
     }
     buildTypes {
         release {
@@ -40,11 +43,17 @@ android {
             dimension "elections"
             applicationId "pl.org.epf.monitorujwybory"
             buildConfigField "String", "WEB_BASE_URL", '"https://mvapi.epf.org.pl/"'
+            buildConfigField "String", "GUIDE_URL", '"https://github.com/epforgpl/monitorizare-vot/raw/master/forms-import/Poradnik_OiA_Short_v8%20-1810.pdf"'
+            buildConfigField "String", "ORGANISATION_WEB_URL", '"http://odpowiedzialnapolityka.pl/index.php/obserwatorzy/"'
+            buildConfigField "String", "SERVICE_CENTER_PHONE_NUMBER", '""'
         }
         ro2015 {
             dimension "elections"
             applicationId "ro.code4.monitorizarevot"
             buildConfigField "String", "WEB_BASE_URL", '"http://viuat.azurewebsites.net/"'
+            buildConfigField "String", "GUIDE_URL", '"http://monitorizare-vot-ghid.azurewebsites.net/"'
+            buildConfigField "String", "ORGANISATION_WEB_URL", '"https://code4.ro/"'
+            buildConfigField "String", "SERVICE_CENTER_PHONE_NUMBER", '"0800 080 200"'
         }
 //        ro2018referendum {
 //            dimension "elections"

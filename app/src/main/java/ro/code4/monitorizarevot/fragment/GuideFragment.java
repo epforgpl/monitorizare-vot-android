@@ -11,7 +11,6 @@ import android.webkit.WebView;
 
 import ro.code4.monitorizarevot.BaseFragment;
 import ro.code4.monitorizarevot.R;
-import ro.code4.monitorizarevot.constants.Constants;
 
 public class GuideFragment extends BaseFragment {
     public static GuideFragment newInstance(String url, String title) {

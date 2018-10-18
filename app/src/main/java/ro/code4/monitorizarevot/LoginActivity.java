@@ -19,8 +19,6 @@ import ro.code4.monitorizarevot.net.model.User;
 import ro.code4.monitorizarevot.observable.ObservableListener;
 import ro.code4.monitorizarevot.observable.ObservableListenerDetacher;
 
-import static ro.code4.monitorizarevot.constants.Constants.ORGANISATION_WEB_URL;
-
 public class LoginActivity extends BaseActivity {
     private EditText username;
     private EditText password;
@@ -62,7 +60,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void openOrganisationWebpage() {
-        Intent openBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse(ORGANISATION_WEB_URL));
+        Intent openBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse(BuildConfig.ORGANISATION_WEB_URL));
         startActivity(openBrowser);
     }
 

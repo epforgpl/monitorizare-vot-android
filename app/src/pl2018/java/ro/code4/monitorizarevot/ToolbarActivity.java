@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import ro.code4.monitorizarevot.adapter.SyncAdapter;
-import ro.code4.monitorizarevot.constants.Constants;
 import ro.code4.monitorizarevot.fragment.BranchSelectionFragment;
 import ro.code4.monitorizarevot.fragment.FormsListFragment;
 import ro.code4.monitorizarevot.fragment.GuideFragment;
@@ -61,7 +60,9 @@ public class ToolbarActivity extends BaseActivity implements Navigator {
         findViewById(R.id.menu_guide).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigateTo(GuideFragment.newInstance(Constants.GUIDE_URL, getString(R.string.title_guide)));
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(BuildConfig.GUIDE_URL));
+                startActivity(i);
             }
         });
         findViewById(R.id.menu_call).setOnClickListener(new View.OnClickListener() {
@@ -74,7 +75,7 @@ public class ToolbarActivity extends BaseActivity implements Navigator {
 
     private void callSupportCenter() {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
-        callIntent.setData(Uri.parse("tel:" + Constants.SERVICE_CENTER_PHONE_NUMBER));
+        callIntent.setData(Uri.parse("tel:" + BuildConfig.SERVICE_CENTER_PHONE_NUMBER));
         startActivity(callIntent);
     }
 

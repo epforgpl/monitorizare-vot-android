@@ -19,8 +19,8 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import ro.code4.monitorizarevot.BaseFragment;
+import ro.code4.monitorizarevot.BuildConfig;
 import ro.code4.monitorizarevot.R;
-import ro.code4.monitorizarevot.constants.Constants;
 import ro.code4.monitorizarevot.db.Data;
 import ro.code4.monitorizarevot.db.Preferences;
 import ro.code4.monitorizarevot.net.model.BranchDetails;
@@ -156,7 +156,7 @@ public class BranchDetailsFragment extends BaseFragment implements View.OnClickL
     }
 
     private void updateTimeText(Calendar calendar, TextView text) {
-        text.setText(new SimpleDateFormat(Constants.TIME_FORMAT, Locale.US).format(calendar.getTime()));
+        text.setText(new SimpleDateFormat(BuildConfig.TIME_FORMAT, Locale.US).format(calendar.getTime()));
     }
 
     private void persistSelection() {

@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
 
@@ -40,10 +40,6 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity
-            android:name="vn.tungdx.mediapicker.activities.MediaPickerActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/MediaPickerTheme" />
         <receiver android:name=".net.NetworkChangeReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -69,6 +65,17 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/syncadapter" />
         </service>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="ro.code4.monitorizarevot.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
         <!-- TODO if it's a a StubProvider why is it here in the first place? -->
         <provider
             android:authorities="@string/authorities"

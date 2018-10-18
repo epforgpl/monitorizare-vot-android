@@ -83,8 +83,11 @@
     <string name="note_title">Dodaj notatkę</string>
     <string name="note_description">Notatka</string>
     <string name="note_description_hint">Wpisz tutaj</string>
-    <string name="note_photo">Dodaj zdjęcie lub wideo</string>
+    <string name="note_photo">Zrób zdjęcie</string>
+    <string name="note_video">Nagraj wideo</string>
+    <string name="note_file">Dodaj plik z galerii</string>
     <string name="note_saved">Zapisano notatkę</string>
     <string name="invalid_note">Dodaj opis lub wgraj zdjęcie/wideo</string>
     <string name="error_permission_external_storage">Uprawnij aplikację do dostępu do zdjęć i wideo</string>
+    <string name="error_media_file">Proszę wybrać zdjęcie lub film</string>
 </resources>

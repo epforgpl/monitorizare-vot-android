@@ -12,12 +12,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ro.code4.monitorizarevot.net.NetworkService;
 import ro.code4.monitorizarevot.net.model.User;
 import ro.code4.monitorizarevot.observable.ObservableListener;
 import ro.code4.monitorizarevot.observable.ObservableListenerDetacher;
-import vn.tungdx.mediapicker.activities.MediaPickerErrorDialog;
 
 import static ro.code4.monitorizarevot.constants.Constants.ORGANISATION_WEB_URL;
 
@@ -79,9 +79,7 @@ public class LoginActivity extends BaseActivity {
             User user = new User(userName, pass, getUdid());
             mListenerDetacher = NetworkService.login(user).startRequest(new LoginSubscriber());
         } else {
-            MediaPickerErrorDialog
-                    .newInstance(getString(R.string.empty_credential_message))
-                    .show(getSupportFragmentManager(), null);
+            Toast.makeText(App.getContext(), getString(R.string.empty_credential_message), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -94,9 +92,7 @@ public class LoginActivity extends BaseActivity {
         public void onError(Throwable e) {
             super.onError(e);
             hideLoading();
-            MediaPickerErrorDialog
-                    .newInstance(e.getMessage())
-                    .show(getSupportFragmentManager(), null);
+            Toast.makeText(App.getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override

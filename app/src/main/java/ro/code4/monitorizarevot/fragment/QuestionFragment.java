@@ -25,6 +25,8 @@ public class QuestionFragment extends BaseFragment {
     private QuestionDetailsNavigator navigator;
     private int numberOfQuestions;
     private int questionIndex;
+    private ViewGroup questionContainer;
+    private boolean isSaving = false;
 
     public static QuestionFragment newInstance(int questionId, int index, int numberOfQuestions) {
         Bundle args = new Bundle();
@@ -70,11 +72,12 @@ public class QuestionFragment extends BaseFragment {
             ((TextView) rootView.findViewById(R.id.button_question_next)).setText(R.string.question_finish);
         }
 
-        final ViewGroup questionContainer = rootView.findViewById(R.id.question_container);
+        questionContainer = rootView.findViewById(R.id.question_container);
         questionContainer.addView(FormRenderer.renderQuestion(getActivity(), question));
         rootView.findViewById(R.id.button_question_next).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isSaving = true;
                 navigator.onSaveAnswerIfCompleted(questionContainer);
                 navigator.onNext();
             }
@@ -82,11 +85,20 @@ public class QuestionFragment extends BaseFragment {
         rootView.findViewById(R.id.button_question_notes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isSaving = true;
                 navigator.onSaveAnswerIfCompleted(questionContainer);
                 navigator.onNotes();
             }
         });
         return rootView;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (questionContainer != null && !isSaving) {
+            navigator.onSaveAnswerIfCompleted(questionContainer);
+        }
     }
 
     private void setDescription(TextView description) {

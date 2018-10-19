@@ -100,13 +100,28 @@ public class BranchSelectionFragment extends BaseFragment {
         });
 
         setItemsSelectedListener(districtsSpinner2, (e) -> {
-            districtsSpinner3.setEnabled(true);
-            branchNumber.setEnabled(false);
-
-            selectedDistrict = null;
             branchNumber.setText("");
 
-            setOptions(districtsSpinner3, Data.getInstance().getDistrictsOf(e.getId()));
+            List<District> smallestDistricts = Data.getInstance().getDistrictsOf(e.getId());
+            if (smallestDistricts.size() > 0) {
+                districtsSpinner3.setEnabled(true);
+                branchNumber.setEnabled(false);
+
+                selectedDistrict = null;
+
+                setOptions(districtsSpinner3, smallestDistricts);
+
+            } else {
+                // in the case that higher level district is at the same time the lower one and it contain polling stations
+                selectedDistrict = e;
+
+                districtsSpinner3.setEnabled(false);
+                ArrayList<District> almostEmpty = new ArrayList<>();
+                almostEmpty.add(e);
+                setOptions(districtsSpinner3, almostEmpty, e, false);
+
+                branchNumber.setEnabled(true);
+            }
         });
 
         setItemsSelectedListener(districtsSpinner3, (f) -> {

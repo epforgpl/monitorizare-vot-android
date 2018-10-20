@@ -82,6 +82,9 @@
     <string name="note_video">Record video</string>
     <string name="note_file">Add from gallery</string>
     <string name="note_saved">Saved message</string>
+    <string name="answer_saved">Answer saved</string>
+    <string name="server_error">Server communication error</string>
+    <string name="no_connection_message">No network connection. Your answer will be automatically sent when the connection is ready</string>
     <string name="invalid_note">Add a description or choose a file</string>
     <string name="error_permission_external_storage">We need your permission to select a resource</string>
     <string name="error_media_file">Only photo or video files can be used</string>

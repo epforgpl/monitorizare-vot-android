@@ -3,16 +3,13 @@ package ro.code4.monitorizarevot.fragment;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v4.content.FileProvider;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +28,8 @@ import ro.code4.monitorizarevot.R;
 import ro.code4.monitorizarevot.db.Data;
 import ro.code4.monitorizarevot.net.NetworkService;
 import ro.code4.monitorizarevot.net.model.Note;
-import ro.code4.monitorizarevot.observable.GeneralSubscriber;
+import ro.code4.monitorizarevot.observable.ObservableListener;
+import ro.code4.monitorizarevot.observable.ToastMessageSubscriber;
 import ro.code4.monitorizarevot.util.FileUtils;
 import ro.code4.monitorizarevot.util.NetworkUtils;
 import ro.code4.monitorizarevot.widget.FileSelectorButton;
@@ -127,7 +125,6 @@ public class AddNoteFragment extends BaseFragment {
                     Toast.makeText(getActivity(), getString(R.string.invalid_note), Toast.LENGTH_SHORT).show();
                 } else {
                     saveNote();
-                    Toast.makeText(getActivity(), getString(R.string.note_saved), Toast.LENGTH_SHORT).show();
                     navigateBack();
                 }
             }
@@ -287,8 +284,12 @@ public class AddNoteFragment extends BaseFragment {
     }
 
     private void syncCurrentNote(Note note){
-        if(NetworkUtils.isOnline(getActivity())){
-            NetworkService.syncCurrentNote(note).startRequest(new GeneralSubscriber());
+        final Context context = this.getActivity().getApplicationContext();
+        if(NetworkUtils.isOnline(getActivity())) {
+            NetworkService.syncCurrentNote(note).startRequest(
+                    new ToastMessageSubscriber(context, context.getString(R.string.note_saved), context.getString(R.string.server_error)));
+        } else {
+            Toast.makeText(getActivity(), context.getString(R.string.no_connection_message), Toast.LENGTH_SHORT).show();
         }
     }
 }

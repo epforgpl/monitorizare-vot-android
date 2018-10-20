@@ -1,11 +1,13 @@
 package ro.code4.monitorizarevot.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -18,7 +20,7 @@ import ro.code4.monitorizarevot.net.model.BranchQuestionAnswer;
 import ro.code4.monitorizarevot.net.model.Question;
 import ro.code4.monitorizarevot.net.model.QuestionAnswer;
 import ro.code4.monitorizarevot.net.model.response.ResponseAnswer;
-import ro.code4.monitorizarevot.observable.GeneralSubscriber;
+import ro.code4.monitorizarevot.observable.ToastMessageSubscriber;
 import ro.code4.monitorizarevot.presenter.QuestionsDetailsPresenter;
 import ro.code4.monitorizarevot.util.FormUtils;
 import ro.code4.monitorizarevot.util.NetworkUtils;
@@ -108,10 +110,14 @@ public class QuestionsDetailsFragment extends BaseFragment implements QuestionDe
     }
 
     private void syncCurrentData(BranchQuestionAnswer branchQuestionAnswer){
+        final Context context = this.getActivity().getApplicationContext();
         if(NetworkUtils.isOnline(getActivity())){
             QuestionAnswer questionAnswer = new QuestionAnswer(branchQuestionAnswer,
                     getArguments().getString(ARGS_FORM_ID));
-            NetworkService.syncCurrentQuestion(questionAnswer).startRequest(new GeneralSubscriber());
+            NetworkService.syncCurrentQuestion(questionAnswer).startRequest(
+                    new ToastMessageSubscriber(context, context.getString(R.string.answer_saved), context.getString(R.string.server_error)));
+        } else {
+            Toast.makeText(getActivity(), context.getString(R.string.no_connection_message), Toast.LENGTH_SHORT).show();
         }
     }
 }

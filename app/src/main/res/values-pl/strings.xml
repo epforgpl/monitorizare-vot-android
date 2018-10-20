@@ -87,6 +87,9 @@
     <string name="note_video">Nagraj wideo</string>
     <string name="note_file">Dodaj plik z galerii</string>
     <string name="note_saved">Zapisano notatkę</string>
+    <string name="answer_saved">Zapisano zmiany</string>
+    <string name="server_error">Wystąpił błąd podczas komunikacji z serwerem</string>
+    <string name="no_connection_message">Brak połączenia z internetem. Zapisano odpowiedź, zostanie ona automatycznie wysłana po nawiązaniu połączenia.</string>
     <string name="invalid_note">Dodaj opis lub wgraj zdjęcie/wideo</string>
     <string name="error_permission_external_storage">Uprawnij aplikację do dostępu do zdjęć i wideo</string>
     <string name="error_media_file">Proszę wybrać zdjęcie lub film</string>

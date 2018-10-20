@@ -96,6 +96,7 @@ public class QuestionFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        // TODO test, maybe only saving here would be enough, and save could be taken out of onClick listeners
         if (questionContainer != null && !isSaving) {
             navigator.onSaveAnswerIfCompleted(questionContainer);
         }

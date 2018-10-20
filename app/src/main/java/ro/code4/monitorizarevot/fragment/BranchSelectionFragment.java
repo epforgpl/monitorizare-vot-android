@@ -66,16 +66,28 @@ public class BranchSelectionFragment extends BaseFragment {
             District l2 = Data.getInstance().getDistrictParent(l3);
             District l1 = Data.getInstance().getDistrictParent(l2);
 
+            if (l1 == null && l3.getLevel() == 2) {
+                l1 = l2;
+                l2 = l3;
+
+                ArrayList<District> almostEmpty = new ArrayList<>();
+                almostEmpty.add(l3);
+                setOptions(districtsSpinner3, almostEmpty, l3, false);
+                districtsSpinner3.setEnabled(false);
+            } else {
+                setOptions(districtsSpinner3, Data.getInstance().getDistrictsOf(l2.getId()), l3, false);
+                districtsSpinner3.setEnabled(true);
+
+            }
+
             setOptions(districtsSpinner1, topDistricts, l1, false);
             setOptions(districtsSpinner2, Data.getInstance().getDistrictsOf(l1.getId()), l2, false);
-            setOptions(districtsSpinner3, Data.getInstance().getDistrictsOf(l2.getId()), l3, false);
 
             selectedDistrict = l3;
 
             branchNumber.setText(String.valueOf(Preferences.getBranchNumber()));
 
             districtsSpinner2.setEnabled(true);
-            districtsSpinner3.setEnabled(true);
             branchNumber.setEnabled(true);
 
         } else {
